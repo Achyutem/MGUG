@@ -1,0 +1,206 @@
+import { useState } from "react";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Menu, ChevronDown } from "lucide-react";
+import { megaMenus, menuItems, type MegaMenus } from "@/utils/data";
+import { MegaMenu } from "@/components/megaMenu";
+import { MobileMenuSection } from "@/components/mobileMenuSection";
+
+export default function Navbar() {
+  const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileExpandedSections, setMobileExpandedSections] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  const handleMegaMenuToggle = (menu: string) => {
+    setActiveMegaMenu(activeMegaMenu === menu ? null : menu);
+  };
+
+  const closeMegaMenu = () => {
+    setActiveMegaMenu(null);
+  };
+
+  const toggleMobileSection = (sectionLabel: string) => {
+    setMobileExpandedSections((prev) => ({
+      ...prev,
+      [sectionLabel]: !prev[sectionLabel],
+    }));
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-2">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <a href="/" className="flex items-center space-x-3">
+              <img
+                src="/logo.png"
+                alt="MGUG Logo"
+                className="w-10 h-10 rounded-xl"
+              />
+              <div className="text-2xl bg-orange-400 bg-clip-text text-transparent font-bold">
+                MGUG
+              </div>
+            </a>
+          </div>
+
+          {/* Links - Desktop */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {menuItems.map((item) => {
+              const hasMegaMenu = item in megaMenus;
+              const isMegaMenuOpen = activeMegaMenu === item;
+
+              if (!hasMegaMenu) {
+                return (
+                  <a
+                    key={item}
+                    href={
+                      item === "Home"
+                        ? "/"
+                        : item === "Research"
+                        ? "https://mgug.ac.in/research/re_facility.php"
+                        : `#${item.toLowerCase()}`
+                    }
+                    className="transition-colors font-medium text-gray-300 hover:text-orange-400"
+                  >
+                    {item}
+                  </a>
+                );
+              }
+
+              return (
+                <div key={item} className="relative">
+                  <button
+                    onClick={() => handleMegaMenuToggle(item)}
+                    className="flex items-center space-x-1 transition-colors font-medium text-gray-300 hover:text-orange-400"
+                  >
+                    <span>{item}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        isMegaMenuOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <MegaMenu
+                    items={megaMenus[item as keyof MegaMenus]}
+                    isOpen={isMegaMenuOpen}
+                    onClose={closeMegaMenu}
+                  />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right: Apply + Menu */}
+          <div className="flex items-center space-x-2 lg:space-x-4">
+            {/* Apply (Mobile) */}
+            <a href="https://erp.mgug.ac.in/login.php">
+              <button className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-md font-medium lg:hidden text-white">
+                Login
+              </button>
+            </a>
+
+            {/* Mobile Sheet Menu */}
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <button className="lg:hidden text-gray-300 hover:text-white">
+                  <Menu className="w-6 h-6" />
+                </button>
+              </SheetTrigger>
+
+              <SheetContent
+                side="right"
+                className="w-64 sm:w-80 bg-gradient-to-b from-black/90 to-black/80 text-white backdrop-blur-xl p-6 shadow-[inset_4px_0px_0px_rgba(249,115,22,0.6)] animate-slide-in border-0"
+              >
+                <div className="flex flex-col h-full justify-between pb-safe">
+                  <nav className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto">
+                    {menuItems.map((item) => {
+                      const hasMegaMenu = item in megaMenus;
+
+                      if (!hasMegaMenu) {
+                        return (
+                          <a
+                            key={item}
+                            href={
+                              item === "Home" ? "#" : `#${item.toLowerCase()}`
+                            }
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block text-gray-300 hover:text-orange-400 transition-colors tracking-wide py-2"
+                          >
+                            {item}
+                          </a>
+                        );
+                      }
+
+                      return (
+                        <div
+                          key={item}
+                          className="border-t border-white/10 pt-4 first:border-0 first:pt-0"
+                        >
+                          <h3 className="text-orange-400 font-semibold text-lg mb-3">
+                            {item}
+                          </h3>
+                          <div className="space-y-1">
+                            {megaMenus[item as keyof MegaMenus].map(
+                              (section, index) => (
+                                <MobileMenuSection
+                                  key={index}
+                                  section={section}
+                                  isOpen={
+                                    mobileExpandedSections[
+                                      `${item}-${section.label}`
+                                    ] || false
+                                  }
+                                  onToggle={() =>
+                                    toggleMobileSection(
+                                      `${item}-${section.label}`
+                                    )
+                                  }
+                                />
+                              )
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </nav>
+
+                  {/* Footer */}
+                  <div className="mt-16 border-t border-white/10 pt-6 text-sm text-gray-500 space-y-1">
+                    <p className="font-medium text-white/60">
+                      Explore MGUG deeply
+                    </p>
+                    <div className="flex space-x-4">
+                      <a href="#" className="hover:text-orange-400">
+                        Privacy
+                      </a>
+                      <a href="#" className="hover:text-orange-400">
+                        Terms
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+
+            {/* Apply (Desktop) */}
+            <a href="https://erp.mgug.ac.in/">
+              <button className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-lg text-sm font-medium text-white">
+                Login
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Overlay to close mega menu when clicking outside */}
+      {activeMegaMenu && (
+        <div
+          className="fixed inset-0 z-30 bg-black/20"
+          onClick={closeMegaMenu}
+        />
+      )}
+    </nav>
+  );
+}
