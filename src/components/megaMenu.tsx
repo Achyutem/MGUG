@@ -81,7 +81,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
       <PopoverContent
         align="center"
         sideOffset={8}
-        className="w-full max-w-7xl p-0 border-none bg-black/95 backdrop-blur-xl shadow-2xl z-50"
+        className="w-full max-w-7xl p-0 border-none bg-blue-950 backdrop-blur-xl shadow-2xl z-50"
       >
         <div className="px-4 sm:px-6 lg:px-8 py-8 max-h-[80vh] overflow-y-auto scrollbar-none">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
