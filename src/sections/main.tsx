@@ -1,6 +1,5 @@
 import AnimatedText from "@/components/animateText";
 import ImageCarousel from "@/components/imageCarousel";
-
 import { Star, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -34,16 +33,16 @@ export default function Main() {
 
               <h1 className="text-[2rem] sm:text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
                 <span className="block">
-                  <span className="text-white">Mahayogi&nbsp;</span>
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    Gorakhnath
+                    Mahayogi&nbsp;
                   </span>
+                  <span className="text-white">Gorakhnath</span>
                 </span>
                 <span className="block">
+                  <span className="text-white">University&nbsp;</span>
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    University&nbsp;
+                    Gorakhpur
                   </span>
-                  <span className="text-white">Gorakhpur</span>
                 </span>
               </h1>
               {/* start */}
