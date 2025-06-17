@@ -23,7 +23,7 @@ export default function Main() {
               style={{ transform: `translateY(${scrollY * 0.06}px)` }}
             >
               <div className="w-full flex justify-center lg:justify-start mb-8">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-900/50 border border-gray-700">
+                <div className="inline-flex items-center px-4 py-2 backdrop-blur-md rounded-full bg-blue-950/30 border border-gray-700">
                   <Star className="w-4 h-4 mr-2 text-orange-400" />
                   <span className="text-sm text-gray-300">
                     Excellence in Education Since 2021
@@ -31,7 +31,7 @@ export default function Main() {
                 </div>
               </div>
 
-              <h1 className="text-[2rem] sm:text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-[2rem] sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
                 <span className="block">
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     Mahayogi&nbsp;
