@@ -43,7 +43,7 @@ export default function FloatingButtonsCustom() {
       title: "Call Us",
     },
     {
-      href: `https://wa.me/+919794299451?text=${encodedWhatsAppMessage}`,
+      href: `https://wa.me/+919415266014?text=${encodedWhatsAppMessage}`,
       icon: MessageCircle,
       title: "Chat on WhatsApp",
     },
