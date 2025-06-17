@@ -16,7 +16,7 @@ import GoverningBody from "./pages/Administration/statuoryBody/governingBody";
 import ExecutiveCouncil from "./pages/Administration/statuoryBody/executiveCouncil";
 import AcademicCouncil from "./pages/Administration/statuoryBody/academicCouncil";
 import BoardOfStudies from "./pages/Administration/statuoryBody/boardofStudies";
-import FinanceCommittee from "./pages/Administration/Committees/FinanceCommittees";
+import FinanceCommittee from "./pages/Administration/Committees/financeCommittees";
 import ExaminationCommittee from "./pages/Administration/Committees/examinationCommittee";
 import SGRCAndOmbudsperson from "./pages/Administration/Committees/sgrcAndOmbuds";
 import AntiRagging from "./pages/Administration/Committees/antiRagging";
