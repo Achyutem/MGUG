@@ -6,11 +6,13 @@ import Contact from "@/sections/contact";
 import Main from "@/sections/main";
 import Academic from "@/sections/academic";
 import Admission from "@/sections/admission";
+import { InfoPopup } from "@/components/popup";
 
 const UniversityLandingPage: React.FC = () => {
   return (
     <div className=" min-h-screen bg-black text-white overflow-hidden">
       <MainLayout>
+        <InfoPopup />
         <Navbar />
         <Main />
         <AboutMain />
