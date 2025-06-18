@@ -20,6 +20,7 @@ import FinanceCommittee from "./pages/Administration/Committees/financeCommittee
 import ExaminationCommittee from "./pages/Administration/Committees/examinationCommittee";
 import SGRCAndOmbudsperson from "./pages/Administration/Committees/sgrcAndOmbuds";
 import AntiRagging from "./pages/Administration/Committees/antiRagging";
+import ItCommittee from "./pages/Administration/Committees/itCommittee";
 
 function App() {
   return (
@@ -87,6 +88,7 @@ function App() {
       />
       <Route path="/Committee/srgc" element={<SGRCAndOmbudsperson />} />
       <Route path="/Committee/Anti-ragging" element={<AntiRagging />} />
+      <Route path="/Committee/it-committee" element={<ItCommittee />} />
     </Routes>
   );
 }
