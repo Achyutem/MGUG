@@ -6,7 +6,7 @@ const ChiefVigilanceOfficer = () => {
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
         <PersonCard
-          image="/Dr_Shashi_Kant_Singh.jpg"
+          image="/admin/Dr_Shashi_Kant_Singh.jpg"
           name="Dr Shashi Kant Singh"
           designation="Chief Vigilance Officer"
           university="Mahayogi Gorakhnath University Gorakhpur"

@@ -6,7 +6,7 @@ export default function proChancellor() {
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
         <PersonCard
-          image="/drupsingh.jpg"
+          image="/admin/drupsingh.jpg"
           name="Prof. Uday Pratap Singh"
           designation="Pro Chancellor"
           university="Mahayogi Gorakhnath University Gorakhpur"

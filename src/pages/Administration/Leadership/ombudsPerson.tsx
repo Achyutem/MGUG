@@ -6,7 +6,7 @@ const OmbudsPerson = () => {
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
         <PersonCard
-          image="/Prof_V_K_Singh.jpg"
+          image="/admin/Prof_V_K_Singh.jpg"
           name="Prof. V. K. Singh"
           designation="Ombuds Person"
           university="Former Vice-Chancellor, DDU Gorakhpur University"
