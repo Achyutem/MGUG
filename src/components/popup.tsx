@@ -14,7 +14,11 @@ export const InfoPopup: FC = () => {
   const [open, setOpen] = useState<boolean>(true);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-  const images: string[] = ["/image2.webp", "/image4.webp", "/image5.webp"];
+  const images: string[] = [
+    "/uploads/commerce.jpg",
+    "/uploads/jobs.jpg",
+    "/uploads/anesthesia.jpg",
+  ];
 
   // Auto-slide functionality
   useEffect(() => {
