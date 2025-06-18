@@ -28,16 +28,23 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-blue-950 border-b border-gray-700/50">
+    <nav
+      className="fixed top-0 left-0 right-0 z-40 bg-blue-950 border-b border-gray-700/50"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-2">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <a href="/" className="flex items-center space-x-3">
+            <a
+              href="/"
+              className="flex items-center space-x-3"
+              aria-label="MGUG Home"
+            >
               <img
                 loading="eager"
                 src="/logo.png"
-                alt="MGUG Logo"
+                alt="Mahayogi Gorakhnath University Gorakhpur Logo"
                 className="w-10 h-10 rounded-xl"
               />
               <div className="text-2xl bg-orange-400 bg-clip-text text-transparent font-bold">
@@ -47,7 +54,10 @@ export default function Navbar() {
           </div>
 
           {/* Links - Desktop */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div
+            className="hidden lg:flex items-center space-x-8"
+            role="navigation"
+          >
             {menuItems.map((item) => {
               const hasMegaMenu = item in megaMenus;
               const isMegaMenuOpen = activeMegaMenu === item;
@@ -64,6 +74,7 @@ export default function Navbar() {
                         : `#${item.toLowerCase()}`
                     }
                     className="transition-colors font-medium text-white hover:text-orange-400"
+                    aria-label={`Navigate to ${item} page`}
                   >
                     {item}
                   </a>
@@ -75,12 +86,16 @@ export default function Navbar() {
                   <button
                     onClick={() => handleMegaMenuToggle(item)}
                     className="flex items-center space-x-1 transition-colors font-medium text-white hover:text-orange-400"
+                    aria-expanded={isMegaMenuOpen}
+                    aria-controls={`mega-menu-${item.toLowerCase()}`}
+                    aria-label={`Toggle ${item} mega menu`}
                   >
                     <span>{item}</span>
                     <ChevronDown
                       className={`w-4 h-4 transition-transform ${
                         isMegaMenuOpen ? "rotate-180" : ""
                       }`}
+                      aria-hidden="true"
                     />
                   </button>
                   <MegaMenu
@@ -97,7 +112,10 @@ export default function Navbar() {
           <div className="flex items-center space-x-2 lg:space-x-4">
             {/* Apply (Mobile) */}
             <a href="https://erp.mgug.ac.in/login.php">
-              <button className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-md font-medium lg:hidden text-white">
+              <button
+                className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-md font-medium lg:hidden text-white"
+                aria-label="Login to MGUG ERP"
+              >
                 Login
               </button>
             </a>
@@ -105,17 +123,27 @@ export default function Navbar() {
             {/* Mobile Sheet Menu */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <button className="lg:hidden text-white hover:text-orange-400">
-                  <Menu className="w-6 h-6" />
+                <button
+                  className="lg:hidden text-white hover:text-orange-400"
+                  aria-label="Toggle mobile menu"
+                  aria-expanded={mobileMenuOpen}
+                  aria-controls="mobile-menu"
+                >
+                  <Menu className="w-6 h-6" aria-hidden="true" />
                 </button>
               </SheetTrigger>
 
               <SheetContent
                 side="right"
                 className="w-64 sm:w-80 bg-blue-950 text-white p-6 border-0"
+                id="mobile-menu"
+                aria-label="Mobile navigation menu"
               >
                 <div className="flex flex-col h-full justify-between pb-safe">
-                  <nav className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto">
+                  <nav
+                    className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto"
+                    aria-label="Mobile menu links"
+                  >
                     {menuItems.map((item) => {
                       const hasMegaMenu = item in megaMenus;
 
@@ -128,6 +156,7 @@ export default function Navbar() {
                             }
                             onClick={() => setMobileMenuOpen(false)}
                             className="block text-white hover:text-orange-400 transition-colors tracking-wide py-2"
+                            aria-label={`Navigate to ${item} page`}
                           >
                             {item}
                           </a>
@@ -138,6 +167,8 @@ export default function Navbar() {
                         <div
                           key={item}
                           className="border-t border-white/20 pt-4 first:border-0 first:pt-0"
+                          role="group"
+                          aria-label={`${item} menu section`}
                         >
                           <h3 className="text-orange-400 font-semibold text-lg mb-3">
                             {item}
@@ -173,10 +204,18 @@ export default function Navbar() {
                       Explore MGUG deeply
                     </p>
                     <div className="flex space-x-4">
-                      <a href="#" className="hover:text-orange-400">
+                      <a
+                        href="#"
+                        className="hover:text-orange-400"
+                        aria-label="View Privacy policy"
+                      >
                         Privacy
                       </a>
-                      <a href="#" className="hover:text-orange-400">
+                      <a
+                        href="#"
+                        className="hover:text-orange-400"
+                        aria-label="View Terms of service"
+                      >
                         Terms
                       </a>
                     </div>
@@ -187,7 +226,10 @@ export default function Navbar() {
 
             {/* Apply (Desktop) */}
             <a href="https://erp.mgug.ac.in/">
-              <button className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-lg text-sm font-medium text-white">
+              <button
+                className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-lg text-sm font-medium text-white"
+                aria-label="Login to MGUG ERP"
+              >
                 Login
               </button>
             </a>
@@ -200,6 +242,8 @@ export default function Navbar() {
         <div
           className="fixed inset-0 z-30 bg-black/10"
           onClick={closeMegaMenu}
+          aria-hidden="true"
+          tabIndex={-1}
         />
       )}
     </nav>
