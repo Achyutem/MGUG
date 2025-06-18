@@ -5,10 +5,10 @@ import {
   Phone,
   MapPin,
   Youtube,
-  MessageCircle,
   HeartHandshake,
 } from "lucide-react";
 import openSiennaMenu from "@/utils/sienna";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingButtonsCustom() {
   const whatsAppMessage =
@@ -44,7 +44,7 @@ export default function FloatingButtonsCustom() {
     },
     {
       href: `https://wa.me/+919415266014?text=${encodedWhatsAppMessage}`,
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       title: "Chat on WhatsApp",
     },
     {
