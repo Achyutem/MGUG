@@ -307,7 +307,11 @@ export const megaMenus: MegaMenus = {
           label: "Anti-Ragging Committee",
           href: "/Committee/Anti-Ragging",
         },
-        { type: "link", label: "IT Committee", href: "https://mgug.ac.in/#" },
+        {
+          type: "link",
+          label: "IT Committee",
+          href: "/Committee/it-committee",
+        },
       ],
     },
   ],
