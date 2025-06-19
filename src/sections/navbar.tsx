@@ -4,6 +4,8 @@ import { Menu, ChevronDown } from "lucide-react";
 import { megaMenus, menuItems, type MegaMenus } from "@/utils/data";
 import { MegaMenu } from "@/components/megaMenu";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
+import openSiennaMenu from "@/utils/sienna";
+import { FaUniversalAccess } from "react-icons/fa";
 
 export default function Navbar() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
@@ -73,7 +75,7 @@ export default function Navbar() {
                         ? "https://mgug.ac.in/research/re_facility.php"
                         : `#${item.toLowerCase()}`
                     }
-                    className="transition-colors font-medium text-white hover:text-orange-400"
+                    className=" font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
                     aria-label={`Navigate to ${item} page`}
                   >
                     {item}
@@ -110,6 +112,12 @@ export default function Navbar() {
 
           {/* Right: Apply + Menu */}
           <div className="flex items-center space-x-2 lg:space-x-4">
+            <button
+              onClick={openSiennaMenu}
+              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] font-2xl transition-all duration-200 hover:scale-105 hover:text-orange-400"
+            >
+              <FaUniversalAccess size={28} />
+            </button>
             {/* Apply (Mobile) */}
             <a href="https://erp.mgug.ac.in/login.php">
               <button
