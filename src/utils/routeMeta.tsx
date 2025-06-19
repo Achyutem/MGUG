@@ -1,0 +1,133 @@
+import UniversityLandingPage from "@/pages/home";
+import AboutUs from "@/pages/More/About/aboutUs";
+import UniversityLogo from "@/pages/More/About/universityLogo";
+import Chancellor from "@/pages/Administration/Leadership/chancellor";
+import ViceChancellor from "@/pages/Administration/Leadership/viceChancellor";
+import ProChancellor from "@/pages/Administration/Leadership/proChancellor";
+import Registrar from "@/pages/Administration/Leadership/registrar";
+import FinanceOfficer from "@/pages/Administration/Leadership/financeOfficer";
+import ControllerOfExamination from "@/pages/Administration/Leadership/controllerOfExamination";
+import ChiefProctor from "@/pages/Administration/Leadership/chiefProctor";
+import ChiefVigilanceOfficer from "@/pages/Administration/Leadership/chiefVigilance";
+import OmbudsPerson from "@/pages/Administration/Leadership/ombudsPerson";
+import EmpoweredBody from "@/pages/Administration/statuoryBody/empoweredBody";
+import GoverningBody from "@/pages/Administration/statuoryBody/governingBody";
+import ExecutiveCouncil from "@/pages/Administration/statuoryBody/executiveCouncil";
+import AcademicCouncil from "@/pages/Administration/statuoryBody/academicCouncil";
+import BoardOfStudies from "@/pages/Administration/statuoryBody/boardofStudies";
+import FinanceCommittee from "@/pages/Administration/Committees/financeCommittees";
+import ExaminationCommittee from "@/pages/Administration/Committees/examinationCommittee";
+import SGRCAndOmbudsperson from "@/pages/Administration/Committees/sgrcAndOmbuds";
+import AntiRagging from "@/pages/Administration/Committees/antiRagging";
+import ItCommittee from "@/pages/Administration/Committees/itCommittee";
+
+export const routeMeta = [
+  { title: "Home", path: "/", element: <UniversityLandingPage /> },
+  { title: "About Us", path: "/about", element: <AboutUs /> },
+  {
+    title: "University Logo",
+    path: "/university-logo",
+    element: <UniversityLogo />,
+  },
+
+  // Leadership
+  {
+    title: "Chancellor",
+    path: "/administration/chancellor",
+    element: <Chancellor />,
+  },
+  {
+    title: "Pro Chancellor",
+    path: "/administration/pro-chancellor",
+    element: <ProChancellor />,
+  },
+  {
+    title: "Vice Chancellor",
+    path: "/administration/vice-chancellor",
+    element: <ViceChancellor />,
+  },
+  {
+    title: "Registrar",
+    path: "/administration/registrar",
+    element: <Registrar />,
+  },
+  {
+    title: "Finance Officer",
+    path: "/administration/finance-officer",
+    element: <FinanceOfficer />,
+  },
+  {
+    title: "Controller of Examination",
+    path: "/administration/Controller-of-Examination",
+    element: <ControllerOfExamination />,
+  },
+  {
+    title: "Chief Proctor",
+    path: "/administration/chief-proctor",
+    element: <ChiefProctor />,
+  },
+  {
+    title: "Chief Vigilance Officer",
+    path: "/administration/Chief-Vigilance-Officer",
+    element: <ChiefVigilanceOfficer />,
+  },
+  {
+    title: "Ombuds Person",
+    path: "/administration/Ombuds-person",
+    element: <OmbudsPerson />,
+  },
+
+  // Statutory Bodies
+  {
+    title: "Empowered Body",
+    path: "/Statutory-Body/Empowered-Body",
+    element: <EmpoweredBody />,
+  },
+  {
+    title: "Governing Body",
+    path: "/Statutory-Body/governing-Body",
+    element: <GoverningBody />,
+  },
+  {
+    title: "Executive Council",
+    path: "/Statutory-Body/executive-council",
+    element: <ExecutiveCouncil />,
+  },
+  {
+    title: "Academic Council",
+    path: "/Statutory-Body/academic-council",
+    element: <AcademicCouncil />,
+  },
+  {
+    title: "Board of Studies",
+    path: "/Statutory-Body/Board-of-Studies",
+    element: <BoardOfStudies />,
+  },
+
+  // Committees
+  {
+    title: "Finance Committee",
+    path: "/Committee/Finance-Committee",
+    element: <FinanceCommittee />,
+  },
+  {
+    title: "Examination Committee",
+    path: "/Committee/Examination-Committee",
+    element: <ExaminationCommittee />,
+  },
+  {
+    title: "SGRC & Ombudsperson",
+    path: "/Committee/srgc",
+    element: <SGRCAndOmbudsperson />,
+  },
+  {
+    title: "Anti-Ragging Committee",
+    path: "/Committee/Anti-ragging",
+    element: <AntiRagging />,
+  },
+  {
+    title: "IT Committee",
+    path: "/Committee/it-committee",
+    element: <ItCommittee />,
+  },
+];
