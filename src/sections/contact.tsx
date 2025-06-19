@@ -9,7 +9,9 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
           <AnimatedCard className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Get in Touch
+              <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                Get in Touch
+              </span>
             </h2>
             <p className="text-xl text-gray-400">
               We're here to help you take the next step in your educational

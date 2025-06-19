@@ -16,7 +16,9 @@ export default function WhyMGUG() {
         <div className="max-w-7xl mx-auto">
           <AnimatedCard className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Why Choose MGUG?
+              <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                Why Choose MGUG?
+              </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Discover what makes Mahayogi Gorakhnath University a premier
