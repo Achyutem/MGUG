@@ -1,5 +1,5 @@
 import MainLayout from "@/layouts/homeLayout";
-import { Computer } from "lucide-react";
+import { FaComputer } from "react-icons/fa6";
 
 const committeeMembers = [
   {
@@ -80,7 +80,7 @@ const ItCommittee = () => {
 
               <div className="flex-1">
                 <div className="flex items-start mb-1 text-orange-400">
-                  <Computer className="mr-2 mt-1" size={18} />
+                  <FaComputer className="mr-2 mt-1" size={18} />
                   <h3 className="text-lg font-semibold">{member.name}</h3>
                 </div>
                 <p className="text-sm text-slate-300 mt-1">

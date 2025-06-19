@@ -1,4 +1,4 @@
-import { ChevronRight, ExternalLink } from "lucide-react";
+import { FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
 import type { MegaMenuSection } from "@/utils/data";
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ export const MobileMenuSection = ({
           rel="noopener noreferrer"
         >
           <span>{label}</span>
-          <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
         </a>
       );
     }
@@ -54,7 +54,7 @@ export const MobileMenuSection = ({
           rel="noopener noreferrer"
         >
           <span>{label}</span>
-          <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <FaExternalLinkAlt className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
         </a>
       );
     }
@@ -74,7 +74,7 @@ export const MobileMenuSection = ({
         aria-expanded={isOpen}
       >
         <span className="font-medium">{section.label}</span>
-        <ChevronRight
+        <FaChevronRight
           className={`w-4 h-4 transition-transform ${
             isOpen ? "rotate-90" : ""
           }`}

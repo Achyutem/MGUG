@@ -8,7 +8,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { X, ArrowLeft, ArrowRight } from "lucide-react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
 export const InfoPopup: FC = () => {
   const [open, setOpen] = useState<boolean>(true);
@@ -108,14 +109,14 @@ export const InfoPopup: FC = () => {
           className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white/90 hover:bg-black/70 transition-all duration-200 active:scale-95"
           aria-label="Previous image"
         >
-          <ArrowLeft className="h-4 w-4" />
+          <FaArrowLeft className="h-4 w-4" />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white/90 hover:bg-black/70 transition-all duration-200 active:scale-95"
           aria-label="Next image"
         >
-          <ArrowRight className="h-4 w-4" />
+          <FaArrowRight className="h-4 w-4" />
         </button>
 
         {/* Mobile Slide Indicators */}
@@ -166,14 +167,14 @@ export const InfoPopup: FC = () => {
           className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white/90 hover:bg-orange-500/80 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
           aria-label="Previous image"
         >
-          <ArrowLeft className="h-5 w-5" />
+          <FaArrowLeft className="h-5 w-5" />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white/90 hover:bg-orange-500/80 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
           aria-label="Next image"
         >
-          <ArrowRight className="h-5 w-5" />
+          <FaArrowRight className="h-5 w-5" />
         </button>
 
         {/* Desktop Slide Indicators */}
@@ -243,7 +244,7 @@ export const InfoPopup: FC = () => {
           onClick={() => setOpen(false)}
           aria-label="Close dialog"
         >
-          <X className="h-4 w-4" />
+          <RxCross2 className="h-4 w-4" />
         </button>
       </DialogContent>
     </Dialog>

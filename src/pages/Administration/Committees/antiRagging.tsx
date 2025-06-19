@@ -1,6 +1,10 @@
-import { Mail, Phone, AlertCircle, Globe } from "lucide-react";
 import MainLayout from "@/layouts/homeLayout";
-
+import { FaPhoneAlt } from "react-icons/fa";
+import {
+  IoAlertCircleOutline,
+  IoGlobeOutline,
+  IoMailOpenOutline,
+} from "react-icons/io5";
 const AntiRagging = () => {
   const committee = [
     {
@@ -120,7 +124,7 @@ const AntiRagging = () => {
         {/* Definition Section */}
         <div className="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-lg mb-6">
           <h2 className="text-2xl font-semibold mb-3 text-orange-300 flex items-center gap-2">
-            <AlertCircle className="text-red-400" /> What is Ragging?
+            <IoAlertCircleOutline className="text-red-400" /> What is Ragging?
           </h2>
           <p>
             “Any disorderly conduct... embarrassment, and adversely affect the
@@ -150,7 +154,8 @@ const AntiRagging = () => {
             {/*📞*/} National Anti-Ragging Helpline
           </h2>
           <p>
-            <Phone className="inline w-4 h-4 mr-2 text-sky-300" /> Toll-Free:{" "}
+            <FaPhoneAlt className="inline w-4 h-4 mr-2 text-sky-300" />{" "}
+            Toll-Free:{" "}
             <a
               href="tel:1800-180-5522"
               className="hover:text-orange-400 hover:underline"
@@ -160,7 +165,8 @@ const AntiRagging = () => {
             </a>
           </p>
           <p>
-            <Mail className="inline w-4 h-4 mr-2 text-sky-300" /> Email:{" "}
+            <IoMailOpenOutline className="inline w-4 h-4 mr-2 text-sky-300" />{" "}
+            Email:{" "}
             <a
               href="mailto:helpline@antiragging.in"
               className="underline text-sky-200"
@@ -169,7 +175,7 @@ const AntiRagging = () => {
             </a>
           </p>
           <p>
-            <Globe className="inline w-4 h-4 mr-2 text-sky-300" />
+            <IoGlobeOutline className="inline w-4 h-4 mr-2 text-sky-300" />
             Website:{" "}
             <a
               href="https://www.antiragging.in"
@@ -235,7 +241,7 @@ const TableList = ({
             <td className="p-4">{name}</td>
             <td className="p-4">{designation}</td>
             <td className="p-4 flex items-center gap-2">
-              <Phone className="w-4 h-4 text-sky-300" />
+              <FaPhoneAlt className="w-4 h-4 text-sky-300" />
               <span>{phone}</span>
             </td>
           </tr>

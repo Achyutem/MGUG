@@ -1,12 +1,12 @@
 import {
-  Mail,
-  Globe,
-  Instagram,
-  Facebook,
-  Twitter,
-  Youtube,
-  FileText,
-} from "lucide-react";
+  FiFacebook,
+  FiTwitter,
+  FiInstagram,
+  FiGlobe,
+  FiYoutube,
+} from "react-icons/fi";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { FiFileText } from "react-icons/fi";
 
 type PersonCardProps = {
   image: string;
@@ -56,7 +56,7 @@ const PersonCard = ({
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-300 text-sm mb-4 justify-center md:justify-start">
           {email && (
             <div className="flex items-center gap-2 justify-center">
-              <Mail size={18} className="text-orange-400" />
+              <IoMailOpenOutline size={18} className="text-orange-400" />
               <a href={`mailto:${email}`} className="hover:underline">
                 {email}
               </a>
@@ -64,7 +64,7 @@ const PersonCard = ({
           )}
           {website && (
             <div className="flex items-center gap-2 justify-center">
-              <Globe size={18} className="text-orange-400" />
+              <FiGlobe size={18} className="text-orange-400" />
               <a
                 href={website}
                 target="_blank"
@@ -86,7 +86,7 @@ const PersonCard = ({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition"
             >
-              <FileText size={18} /> View Profile
+              <FiFileText size={18} /> View Profile
             </a>
           </div>
         )}
@@ -101,7 +101,7 @@ const PersonCard = ({
                 rel="noopener noreferrer"
                 className="hover:text-orange-400 transition"
               >
-                <Instagram size={22} />
+                <FiInstagram size={22} />
               </a>
             )}
             {socials.facebook && (
@@ -111,7 +111,7 @@ const PersonCard = ({
                 rel="noopener noreferrer"
                 className="hover:text-orange-400 transition"
               >
-                <Facebook size={22} />
+                <FiFacebook size={22} />
               </a>
             )}
             {socials.twitter && (
@@ -121,7 +121,7 @@ const PersonCard = ({
                 rel="noopener noreferrer"
                 className="hover:text-orange-400 transition"
               >
-                <Twitter size={22} />
+                <FiTwitter size={22} />
               </a>
             )}
             {socials.youtube && (
@@ -131,7 +131,7 @@ const PersonCard = ({
                 rel="noopener noreferrer"
                 className="hover:text-orange-400 transition"
               >
-                <Youtube size={22} />
+                <FiYoutube size={22} />
               </a>
             )}
           </div>

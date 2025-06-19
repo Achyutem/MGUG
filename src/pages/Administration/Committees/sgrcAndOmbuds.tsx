@@ -1,5 +1,6 @@
 import MainLayout from "@/layouts/homeLayout";
-import { Mail, Phone } from "lucide-react";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const SGRCAndOmbudsperson = () => {
   return (
@@ -113,11 +114,11 @@ const SGRCAndOmbudsperson = () => {
                 Former Vice-Chancellor, DDU Gorakhpur University
               </p>
               <p className="mb-1 flex items-center gap-2">
-                <Phone size={18} className="text-sky-300" />
+                <FaPhoneAlt size={18} className="text-sky-300" />
                 <strong>+91-7905468594</strong>
               </p>
               <p className="flex items-center gap-2">
-                <Mail size={18} className="text-sky-300" />
+                <IoMailOpenOutline size={18} className="text-sky-300" />
                 <a
                   href="mailto:singhvijaikrishna9@gmail.com"
                   className="underline text-sky-300"

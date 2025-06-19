@@ -3,7 +3,7 @@ import {
   PopoverContent,
   PopoverAnchor,
 } from "@/components/ui/popover";
-import { ExternalLink } from "lucide-react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import type { MegaMenuSection } from "@/utils/data";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
     const content = (
       <>
         <span>{label}</span>
-        <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 group-hover:text-orange-400" />
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 group-hover:text-orange-400" />
       </>
     );
 
@@ -51,7 +51,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
     const content = (
       <>
         <span>{label}</span>
-        <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-400" />
+        <FaExternalLinkAlt className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 group-hover:text-orange-400" />
       </>
     );
 
