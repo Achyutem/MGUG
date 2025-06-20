@@ -38,7 +38,7 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: "Academic Calendar",
-          href: "https://mgug.ac.in/academics/academic_calendar.php",
+          href: "/academic-calendar",
         },
         { type: "link", label: "E-Learning", href: "https://mgug.ac.in/#" },
         {
@@ -48,7 +48,7 @@ export const megaMenus: MegaMenus = {
             {
               type: "link",
               label: "Examination Manual",
-              href: "https://mgug.ac.in/examination/examination_manual.php",
+              href: "/examination-manual",
             },
             {
               type: "link",
@@ -324,7 +324,7 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: "Vision & Mission",
-          href: "https://mgug.ac.in/the_university/vision.php",
+          href: "/vision",
         },
         {
           type: "link",
@@ -387,7 +387,11 @@ export const megaMenus: MegaMenus = {
           label: "Swayam Portal",
           href: "https://swayam.gov.in/",
         },
-        { type: "link", label: "ERP", href: "https://erp.mgug.ac.in/" },
+        {
+          type: "link",
+          label: "ERP",
+          href: "https://erp.mgug.ac.in/login.php",
+        },
         {
           type: "link",
           label: "E-Samadhaan",

@@ -20,10 +20,29 @@ import ExaminationCommittee from "@/pages/Administration/Committees/examinationC
 import SGRCAndOmbudsperson from "@/pages/Administration/Committees/sgrcAndOmbuds";
 import AntiRagging from "@/pages/Administration/Committees/antiRagging";
 import ItCommittee from "@/pages/Administration/Committees/itCommittee";
+import Contact from "@/pages/contact";
+import Vision from "@/pages/More/About/vision";
+import AcademicCalendar from "@/pages/Students/Academics/academicCalendar";
+import ExaminationManual from "@/pages/Students/Academics/examinationManual";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
+  { title: "Contact", path: "/contact", element: <Contact /> },
+  // Students
+  {
+    title: "Academic Calendar",
+    path: "/academic-calendar",
+    element: <AcademicCalendar />,
+  },
+  {
+    title: "Examination Manual",
+    path: "/examination-manual",
+    element: <ExaminationManual />,
+  },
+
+  // More
   { title: "About Us", path: "/about", element: <AboutUs /> },
+  { title: "Vision and Mission", path: "/vision", element: <Vision /> },
   {
     title: "University Logo",
     path: "/university-logo",
