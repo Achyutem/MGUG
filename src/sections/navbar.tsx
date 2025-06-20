@@ -73,6 +73,8 @@ export default function Navbar() {
                         ? "/"
                         : item === "Research"
                         ? "https://mgug.ac.in/research/re_facility.php"
+                        : item === "Contact"
+                        ? "/contact"
                         : `#${item.toLowerCase()}`
                     }
                     className=" font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
@@ -160,7 +162,13 @@ export default function Navbar() {
                           <a
                             key={item}
                             href={
-                              item === "Home" ? "#" : `#${item.toLowerCase()}`
+                              item === "Home"
+                                ? "/"
+                                : item === "Research"
+                                ? "https://mgug.ac.in/research/re_facility.php"
+                                : item === "Contact"
+                                ? "/contact"
+                                : `#${item.toLowerCase()}`
                             }
                             onClick={() => setMobileMenuOpen(false)}
                             className="block text-white hover:text-orange-400 transition-colors tracking-wide py-2"
