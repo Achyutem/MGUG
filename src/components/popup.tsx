@@ -14,6 +14,7 @@ import { RxCross2 } from "react-icons/rx";
 export const InfoPopup: FC = () => {
   const [open, setOpen] = useState<boolean>(true);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [hovering, setHovering] = useState<boolean>(false);
 
   const images: string[] = [
     "/uploads/commerce.jpg",
@@ -21,28 +22,18 @@ export const InfoPopup: FC = () => {
     "/uploads/anesthesia.jpg",
   ];
 
-  // Auto-slide functionality
   useEffect(() => {
-    if (!open) return;
-
+    if (!open || hovering) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 4000);
-
+    }, 3000);
     return () => clearInterval(interval);
-  }, [open, images.length]);
+  }, [open, hovering, images.length]);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % images.length);
-  };
-
-  const prevSlide = () => {
+  const goToSlide = (index: number) => setCurrentSlide(index);
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % images.length);
+  const prevSlide = () =>
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
-  };
 
   const InfoContent: FC = () => (
     <div className="space-y-3 text-sm text-gray-200">
@@ -57,7 +48,6 @@ export const InfoPopup: FC = () => {
 
   const MobileView = () => (
     <div className="flex flex-col h-full max-h-[90vh] overflow-y-auto scrollbar-hide">
-      {/* Information Section - Top */}
       <div className="flex flex-col p-4 flex-1">
         <DialogHeader className="text-left">
           <DialogTitle className="text-xl font-bold text-orange-400 tracking-tight">
@@ -79,10 +69,12 @@ export const InfoPopup: FC = () => {
           </a>
         </div>
       </div>
-
-      {/* Image Carousel - Bottom */}
       <div className="relative w-full h-[80vw] sm:h-[60vw] max-h-[500px] flex-shrink-0 overflow-hidden">
-        <div className="relative w-full h-full">
+        <div
+          className="relative w-full h-full"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(false)}
+        >
           {images.map((src, index) => (
             <div
               key={index}
@@ -102,8 +94,6 @@ export const InfoPopup: FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Mobile Navigation Arrows */}
         <button
           onClick={prevSlide}
           className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white/90 hover:bg-black/70 transition-all duration-200 active:scale-95"
@@ -118,8 +108,6 @@ export const InfoPopup: FC = () => {
         >
           <FaArrowRight className="h-4 w-4" />
         </button>
-
-        {/* Mobile Slide Indicators */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
           {images.map((_, index) => (
             <button
@@ -138,9 +126,12 @@ export const InfoPopup: FC = () => {
 
   const DesktopView = () => (
     <div className="grid grid-cols-2 h-full max-h-[80vh] overflow-hidden">
-      {/* Image Carousel - Left */}
       <div className="relative flex items-center justify-center overflow-hidden">
-        <div className="relative w-full h-full">
+        <div
+          className="relative w-full h-full"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(false)}
+        >
           {images.map((src, index) => (
             <div
               key={index}
@@ -160,8 +151,6 @@ export const InfoPopup: FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Desktop Navigation Arrows */}
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white/90 hover:bg-orange-500/80 hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg"
@@ -176,8 +165,6 @@ export const InfoPopup: FC = () => {
         >
           <FaArrowRight className="h-5 w-5" />
         </button>
-
-        {/* Desktop Slide Indicators */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
           {images.map((_, index) => (
             <button
@@ -193,8 +180,6 @@ export const InfoPopup: FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Information Section - Right */}
       <div className="flex flex-col p-6 lg:p-8 overflow-y-auto">
         <DialogHeader className="text-left">
           <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-400 tracking-tight">
@@ -227,18 +212,13 @@ export const InfoPopup: FC = () => {
           Open Info
         </button>
       </DialogTrigger>
-
       <DialogContent className="w-[95vw] max-w-[95vw] sm:w-[90vw] sm:max-w-[90vw] md:max-w-4xl lg:max-w-6xl max-h-[95vh] overflow-hidden rounded-xl bg-gray-900 p-0 text-white shadow-2xl border border-gray-700">
-        {/* Mobile View */}
         <div className="md:hidden">
           <MobileView />
         </div>
-        {/* Desktop View */}
         <div className="hidden md:block h-full">
           <DesktopView />
         </div>
-
-        {/* Global Close Button */}
         <button
           className="absolute right-3 top-3 z-20 rounded-full bg-red-600 p-2 text-white transition-all duration-200 hover:bg-red-700 hover:scale-110 active:scale-95 shadow-lg"
           onClick={() => setOpen(false)}
