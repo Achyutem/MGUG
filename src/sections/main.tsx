@@ -1,6 +1,6 @@
 import AnimatedText from "@/components/animateText";
 import ImageCarousel from "@/components/imageCarousel";
-import { Star, ChevronDown } from "lucide-react";
+import { FaRegStar, FaChevronDown } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 export default function Main() {
@@ -24,7 +24,7 @@ export default function Main() {
             >
               <div className="w-full flex justify-center lg:justify-start mb-8">
                 <div className="inline-flex items-center px-4 py-2 backdrop-blur-md rounded-full bg-blue-950/30 border border-gray-700">
-                  <Star className="w-4 h-4 mr-2 text-orange-400" />
+                  <FaRegStar className="w-4 h-4 mr-2 text-orange-400" />
                   <span className="text-sm text-gray-300">
                     Excellence in Education Since 2021
                   </span>
@@ -108,7 +108,7 @@ export default function Main() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-gray-500" />
+          <FaChevronDown className="w-8 h-8 text-gray-500" />
         </div>
       </section>
     </div>

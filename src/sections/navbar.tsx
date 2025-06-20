@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { Menu, ChevronDown } from "lucide-react";
+import { IoMdMenu } from "react-icons/io";
 import { megaMenus, menuItems, type MegaMenus } from "@/utils/data";
 import { MegaMenu } from "@/components/megaMenu";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
 import openSiennaMenu from "@/utils/sienna";
-import { FaUniversalAccess } from "react-icons/fa";
+import { FaUniversalAccess, FaChevronDown } from "react-icons/fa";
 
 export default function Navbar() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
@@ -93,7 +93,7 @@ export default function Navbar() {
                     aria-label={`Toggle ${item} mega menu`}
                   >
                     <span>{item}</span>
-                    <ChevronDown
+                    <FaChevronDown
                       className={`w-4 h-4 transition-transform ${
                         isMegaMenuOpen ? "rotate-180" : ""
                       }`}
@@ -137,7 +137,7 @@ export default function Navbar() {
                   aria-expanded={mobileMenuOpen}
                   aria-controls="mobile-menu"
                 >
-                  <Menu className="w-6 h-6" aria-hidden="true" />
+                  <IoMdMenu className="w-6 h-6" aria-hidden="true" />
                 </button>
               </SheetTrigger>
 

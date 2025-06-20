@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { IoMailOpenOutline } from "react-icons/io5";
 import AnimatedCard from "@/components/animatedCard";
 import ModernCard from "@/components/modernCards";
 
@@ -28,7 +29,7 @@ export default function Contact() {
                 <ModernCard className="text-center cursor-pointer hover:scale-105 transition-transform duration-200">
                   <div className="mb-4 flex justify-center">
                     <div className="p-3 rounded-full bg-orange-600/20 text-orange-400">
-                      <MapPin className="w-6 h-6" />
+                      <FaMapMarkerAlt className="w-6 h-6" />
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">
@@ -50,7 +51,7 @@ export default function Contact() {
                 <ModernCard className="text-center cursor-pointer hover:scale-105 transition-transform duration-200">
                   <div className="mb-4 flex justify-center">
                     <div className="p-3 rounded-full bg-orange-600/20 text-orange-400">
-                      <Phone className="w-6 h-6" />
+                      <FaPhoneAlt className="w-6 h-6" />
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">
@@ -72,7 +73,7 @@ export default function Contact() {
                 <ModernCard className="text-center cursor-pointer hover:scale-105 transition-transform duration-200">
                   <div className="mb-4 flex justify-center">
                     <div className="p-3 rounded-full bg-orange-600/20 text-orange-400">
-                      <Mail className="w-6 h-6" />
+                      <IoMailOpenOutline className="w-6 h-6" />
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">

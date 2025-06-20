@@ -1,11 +1,8 @@
-import {
-  Award,
-  Microscope,
-  Building,
-  Globe,
-  Target,
-  Library,
-} from "lucide-react";
+import { LuAward, LuMicroscope } from "react-icons/lu";
+import { IoLibraryOutline } from "react-icons/io5";
+import { BsGlobe } from "react-icons/bs";
+import { FaBuildingColumns } from "react-icons/fa6";
+import { TbTargetArrow } from "react-icons/tb";
 import AnimatedCard from "@/components/animatedCard";
 import FeatureCard from "@/components/featureCard";
 
@@ -27,37 +24,37 @@ export default function WhyMGUG() {
           </AnimatedCard>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              icon={<Award className="w-8 h-8" />}
+              icon={<LuAward className="w-8 h-8" />}
               title="Academic Excellence"
               description="Dedicated to maintaining high academic standards through innovative teaching and a student-first approach."
               delay={0}
             />
             <FeatureCard
-              icon={<Microscope className="w-8 h-8" />}
+              icon={<LuMicroscope className="w-8 h-8" />}
               title="Research Excellence"
               description="State-of-the-art research facilities and opportunities for groundbreaking discoveries across disciplines."
               delay={200}
             />
             <FeatureCard
-              icon={<Building className="w-8 h-8" />}
+              icon={<FaBuildingColumns className="w-8 h-8" />}
               title="Modern Infrastructure"
               description="Contemporary campus with smart classrooms, advanced labs, and world-class facilities."
               delay={400}
             />
             <FeatureCard
-              icon={<Globe className="w-8 h-8" />}
+              icon={<BsGlobe className="w-8 h-8" />}
               title="Global Partnerships"
               description="International collaborations and exchange programs with renowned universities worldwide."
               delay={600}
             />
             <FeatureCard
-              icon={<Target className="w-8 h-8" />}
+              icon={<TbTargetArrow className="w-8 h-8" />}
               title="Industry Focused"
               description="Curriculum designed with industry needs in mind, ensuring graduates are job-ready."
               delay={800}
             />
             <FeatureCard
-              icon={<Library className="w-8 h-8" />}
+              icon={<IoLibraryOutline className="w-8 h-8" />}
               title="Digital Learning"
               description="Cutting-edge e-learning platforms and digital resources for enhanced educational experience."
               delay={1000}

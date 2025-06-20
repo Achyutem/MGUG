@@ -1,4 +1,6 @@
-import { Stethoscope, HeartPulse, Award, Building } from "lucide-react";
+import { FaStethoscope, FaAward } from "react-icons/fa";
+import { LuHeartPulse } from "react-icons/lu";
+import { FaBuildingColumns } from "react-icons/fa6";
 import AnimatedCard from "@/components/animatedCard";
 import ProgramCard from "@/components/programCard";
 
@@ -22,25 +24,25 @@ export default function Academic() {
             <ProgramCard
               title="Medical & Surgery"
               description="MBBS and postgraduate medical degrees with a focus on clinical excellence and research."
-              icon={<Stethoscope className="w-6 h-6" />}
+              icon={<FaStethoscope className="w-6 h-6" />}
               delay={0}
             />
             <ProgramCard
               title="Management & Commerce"
               description="MBA, BBA, B.Com, M.Com with specializations in Finance, Marketing, and Entrepreneurship."
-              icon={<Building className="w-6 h-6" />}
+              icon={<FaBuildingColumns className="w-6 h-6" />}
               delay={200}
             />
             <ProgramCard
               title="Allied Health Sciences"
               description="Programs in Physiotherapy, Medical Lab Technology, Radiology, and other healthcare fields."
-              icon={<HeartPulse className="w-6 h-6" />}
+              icon={<LuHeartPulse className="w-6 h-6" />}
               delay={400}
             />
             <ProgramCard
               title="Nursing & Biomedical Sciences"
               description="B.Sc Nursing, M.Sc Nursing, and research-oriented biomedical science courses."
-              icon={<Award className="w-6 h-6" />}
+              icon={<FaAward className="w-6 h-6" />}
               delay={600}
             />
           </div>

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa";
 import AnimatedCard from "@/components/animatedCard";
 import ModernCard from "@/components/modernCards";
 
@@ -20,7 +20,7 @@ export default function Admission() {
                 <a href="https://admission.mgug.ac.in/">
                   <button className="px-6 sm:px-12 py-4 bg-gradient-to-r from-orange-600 to-amber-600 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105 flex items-center justify-center w-auto">
                     Apply for Admission
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </a>
                 <a href="https://admission.mgug.ac.in/doc/Prospectus_2025_Final_21-03-2025_Final.pdf">

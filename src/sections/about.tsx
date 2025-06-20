@@ -1,6 +1,9 @@
-import { Users, GraduationCap, BookOpen, Trophy } from "lucide-react";
 import AnimatedCard from "@/components/animatedCard";
 import StatsCard from "@/components/statsCard";
+import { PiGraduationCapDuotone } from "react-icons/pi";
+import { FaUsers } from "react-icons/fa6";
+import { FiBookOpen } from "react-icons/fi";
+import { LuTrophy } from "react-icons/lu";
 
 export default function AboutMain() {
   return (
@@ -22,25 +25,25 @@ export default function AboutMain() {
             <StatsCard
               number="3,000+"
               label="Students"
-              icon={<Users className="w-6 h-6" />}
+              icon={<FaUsers className="w-6 h-6" />}
               delay={0}
             />
             <StatsCard
               number="300+"
               label="Faculty"
-              icon={<GraduationCap className="w-6 h-6" />}
+              icon={<PiGraduationCapDuotone className="w-6 h-6" />}
               delay={200}
             />
             <StatsCard
               number="40+"
               label="Programs"
-              icon={<BookOpen className="w-6 h-6" />}
+              icon={<FiBookOpen className="w-6 h-6" />}
               delay={400}
             />
             <StatsCard
               number="98%"
               label="Placement Rate"
-              icon={<Trophy className="w-6 h-6" />}
+              icon={<LuTrophy className="w-6 h-6" />}
               delay={600}
             />
           </div>
