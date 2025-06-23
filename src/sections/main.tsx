@@ -25,13 +25,13 @@ export default function Main() {
               <div className="w-full flex justify-center lg:justify-start mb-6 lg:mb-8">
                 <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 backdrop-blur-md rounded-full bg-blue-950/30 border border-gray-700">
                   <FaRegStar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-400" />
-                  <span className="text-xs sm:text-sm text-gray-300">
+                  <span className="text-sm sm:text-lg text-gray-300">
                     Excellence in Education Since 2021
                   </span>
                 </div>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
                 <span className="block">
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     Mahayogi&nbsp;
@@ -49,7 +49,7 @@ export default function Main() {
               {/* Animated Text Section */}
               <div className="mb-6 lg:mb-8 relative">
                 <div className="text-center lg:text-left">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-black text-white">
+                  <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black text-white">
                     <span className="relative inline-block">
                       <AnimatedText
                         text="REDEFINING"
