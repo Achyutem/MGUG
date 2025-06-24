@@ -38,3 +38,64 @@ export interface AnimatedTextProp {
   loopInterval?: number;
   className?: string;
 }
+
+export interface CommitteeMember {
+  srNo: number;
+  name: {
+    hindi: string;
+    english: string;
+  };
+  designation: {
+    hindi: string;
+    english: string;
+  };
+  role: {
+    hindi: string;
+    english: string;
+  };
+  status: {
+    hindi: string;
+    english: string;
+  };
+}
+
+export interface Title {
+  hindi: string;
+  english: string;
+}
+
+export interface CommitteeTitles {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    nameDesignation: Title;
+    role: Title;
+    status: Title;
+  };
+}
+
+export interface SGRCCommitteeTitles {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    name: Title;
+    designation: Title;
+    role: Title;
+  };
+}
+
+export interface SGRCCommitteeMember {
+  srNo: number;
+  name: Title;
+  designation: Title;
+  role: Title;
+}
+
+export interface Ombudsperson {
+  name: Title;
+  designation: Title;
+  contact: {
+    phone: string;
+    email: string;
+  };
+}
