@@ -1,58 +1,6 @@
 import MainLayout from "@/layouts/homeLayout";
 import { MdComputer } from "react-icons/md";
-
-const committeeMembers = [
-  {
-    image: "/sample.webp",
-    name: "Dr. Prashanth S. Murthy",
-    designation: "IT Chief, Dean Academics",
-  },
-  {
-    image: "/sample.webp",
-    name: "Avinash Kamal Mishra",
-    designation: "ERP Developer",
-  },
-  {
-    image: "/sample.webp",
-    name: "Kamal Nayan Srivastava",
-    designation: "Social Media Manager",
-  },
-  {
-    image: "/sample.webp",
-    name: "Anand Mishra",
-    designation: "System Admin",
-  },
-  {
-    image: "/sample.webp",
-    name: "Sharadanand Pandey",
-    designation: "Graphic Designer",
-  },
-  {
-    image: "/sample.webp",
-    name: "Sunny Kumar",
-    designation: "Network Admin",
-  },
-  {
-    image: "/sample.webp",
-    name: "Omkar Yadav",
-    designation: "Web Developer",
-  },
-  {
-    image: "/sample.webp",
-    name: "Ravi Yadav",
-    designation: "Content Creator",
-  },
-  {
-    image: "/sample.webp",
-    name: "Ankit Kumar Singh",
-    designation: "Junior Developer",
-  },
-  {
-    image: "/sample.webp",
-    name: "Achyutem Dubey",
-    designation: "Web Developer",
-  },
-];
+import { ItCommitteeMembers } from "@/utils/committeeData";
 //
 const ItCommittee = () => {
   return (
@@ -63,7 +11,7 @@ const ItCommittee = () => {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {committeeMembers.map((member, idx) => (
+          {ItCommitteeMembers.map((member, idx) => (
             <div
               key={idx}
               className="flex items-center bg-blue-950 text-white rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300 border border-slate-800 hover:border-orange-400"

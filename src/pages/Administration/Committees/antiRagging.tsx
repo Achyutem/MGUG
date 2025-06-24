@@ -5,103 +5,9 @@ import {
   IoGlobeOutline,
   IoMailOpenOutline,
 } from "react-icons/io5";
+import { AntiRaggingcommittee, AntiRaggingsquad } from "@/utils/committeeData";
+
 const AntiRagging = () => {
-  const committee = [
-    {
-      no: 1,
-      name: "Dr. Vimal Kumar Dubey",
-      designation: "Chief Proctor, Chair Person",
-      phone: "9999764424",
-    },
-    {
-      no: 2,
-      name: "Prof. Sunil Kumar",
-      designation: "Dean, Faculty of Allied Health Sciences, Co-ordinator",
-      phone: "7007638374",
-    },
-    {
-      no: 3,
-      name: "Dr. D.S. Ajitha",
-      designation: "Principal, Member",
-      phone: "8840477265",
-    },
-    {
-      no: 4,
-      name: "Dr. Manjunath NS",
-      designation: "Principal, GGIMS, Member",
-      phone: "9886728745",
-    },
-    {
-      no: 5,
-      name: "Shri Rohit Kumar",
-      designation: "Principal, Mahant Avaidyanath Paramedical College, Member",
-      phone: "7394086797",
-    },
-    {
-      no: 6,
-      name: "Shri Ashish Chaudhary",
-      designation: "Student, BAMS, Student Representative",
-      phone: "8933854299",
-    },
-  ];
-
-  const squad = [
-    {
-      no: 1,
-      name: "Dr. Shashikant Singh",
-      designation: "Principal, Faculty of Pharmaceutical Sciences, Chairperson",
-      phone: "7007546991",
-    },
-    {
-      no: 2,
-      name: "Dr. Reshmi Pushpan",
-      designation: "Professor, Agad Tantra, GGIMS",
-      phone: "8289933175",
-    },
-    {
-      no: 3,
-      name: "Dr. Deepu Manohar",
-      designation: "Assistant Prof., Rachana Sharir, GGIMS",
-      phone: "7068152117",
-    },
-    {
-      no: 4,
-      name: "Dr. Akhilesh Kumar Dubey",
-      designation: "Assistant Prof., Allied Health Sciences, Coordinator",
-      phone: "9451520116",
-    },
-    {
-      no: 5,
-      name: "Dr. Vikas Kumar Yadav",
-      designation: "Assistant Prof., Agriculture Dept., Member",
-      phone: "9565919002",
-    },
-    {
-      no: 6,
-      name: "Ms. Pragya Pandey",
-      designation: "Superintendent, Maa Pateshwari Sevashram Hostel, Member",
-      phone: "6202190347",
-    },
-    {
-      no: 7,
-      name: "Ms. Rinki Singh",
-      designation: "Tutor, GSG College of Nursing, Member",
-      phone: "8957120500",
-    },
-    {
-      no: 8,
-      name: "Ms. Shweta Albert",
-      designation: "Tutor, GSG College of Nursing, Member",
-      phone: "8687894954",
-    },
-    {
-      no: 9,
-      name: "Mr. Shubham Kumar Maurya",
-      designation: "Tutor, MAP College, Member",
-      phone: "8477077041",
-    },
-  ];
-
   return (
     <MainLayout>
       <section className="py-12 px-4 md:px-16 max-w-7xl mx-auto text-slate-200">
@@ -201,13 +107,13 @@ const AntiRagging = () => {
         <h2 className="text-2xl font-semibold mb-2 text-orange-300">
           Anti-Ragging Committee
         </h2>
-        <TableList data={committee} />
+        <TableList data={AntiRaggingcommittee} />
 
         {/* Anti-Ragging Squad Table */}
         <h2 className="text-2xl font-semibold mt-10 mb-2 text-orange-300">
           Anti-Ragging Squad
         </h2>
-        <TableList data={squad} />
+        <TableList data={AntiRaggingsquad} />
       </section>
     </MainLayout>
   );
