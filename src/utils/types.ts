@@ -99,3 +99,55 @@ export interface Ombudsperson {
     email: string;
   };
 }
+
+export interface AcademicCouncilMember {
+  srNo: number;
+  name: {
+    hindi: string;
+    english: string;
+  };
+  type: {
+    hindi: string;
+    english: string;
+  };
+  role: {
+    hindi: string;
+    english: string;
+  };
+}
+
+export interface AcademicCouncilTitles {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    name: Title;
+    type: Title;
+    role: Title;
+  };
+}
+
+export interface BoardMember {
+  srNo: number;
+  name: Title;
+  designation: Title;
+  role: Title;
+}
+
+export interface BoardSection {
+  heading: Title;
+  headers: {
+    srNo: Title;
+    name: Title;
+    designation: Title;
+    role: Title;
+  };
+  members: BoardMember[];
+}
+
+export interface BoardOfStudiesData {
+  title: Title;
+  ayurveda: BoardSection;
+  medicalMicrobiology: BoardSection;
+  medicalBiochemistry: BoardSection;
+  biotechnology: BoardSection;
+}
