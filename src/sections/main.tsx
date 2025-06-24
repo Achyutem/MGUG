@@ -84,14 +84,17 @@ export default function Main() {
                 research.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <a href="https://mgug.ac.in/academics/programmes_list.php">
-                  <button className="w-full sm:w-auto px-4 py-3 text-sm sm:px-5 sm:py-3 sm:text-base rounded-lg font-semibold bg-gradient-to-r from-orange-600 to-amber-600 hover:scale-105 transition-all duration-300">
+              <div className="flex flex-row flex-wrap sm:flex-nowrap gap-2 sm:gap-3 justify-center lg:justify-start overflow-x-auto pl-1">
+                <a
+                  href="https://mgug.ac.in/academics/programmes_list.php"
+                  className="shrink-0"
+                >
+                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-gradient-to-r from-orange-600 to-amber-600 hover:scale-105 transition-all duration-300">
                     Explore Programs
                   </button>
                 </a>
 
-                <button className="w-full sm:w-auto px-4 py-3 text-sm sm:px-5 sm:py-3 sm:text-base rounded-lg font-semibold bg-gray-900/50 border border-gray-700 hover:border-orange-500/50 hover:bg-gray-900/70 transition-all duration-300">
+                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-gray-900/50 border border-gray-700 hover:border-orange-500/50 hover:bg-gray-900/70 transition-all duration-300 shrink-0">
                   Virtual Tour
                 </button>
               </div>
