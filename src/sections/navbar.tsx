@@ -6,6 +6,7 @@ import { MegaMenu } from "@/components/megaMenu";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
 import openSiennaMenu from "@/utils/sienna";
 import { FaUniversalAccess, FaChevronDown } from "react-icons/fa";
+import LanguageToggle from "@/components/languageSwitcher";
 
 export default function Navbar() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
@@ -53,6 +54,7 @@ export default function Navbar() {
                 MGUG
               </div>
             </a>
+            <LanguageToggle />
           </div>
 
           {/* Links - Desktop */}
