@@ -104,7 +104,7 @@ export const AntiRaggingsquad = [
 
 export const ItCommitteeMembers = [
   {
-    image: "/sample.webp",
+    image: "/admin/prashanthMurthy.jpg",
     name: "Dr. Prashanth S. Murthy",
     designation: "IT Chief, Dean Academics",
   },
