@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { IoMdMenu } from "react-icons/io";
-import { megaMenus, menuItems, type MegaMenus } from "@/utils/data";
+import { megaMenus, menuItems, type MegaMenus } from "@/utils/menuData";
 import { MegaMenu } from "@/components/megaMenu";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
 import openSiennaMenu from "@/utils/sienna";
@@ -241,7 +241,7 @@ export default function Navbar() {
             </Sheet>
 
             {/* Apply (Desktop) */}
-            <a href="https://erp.mgug.ac.in/">
+            <a href="https://erp.mgug.ac.in/login.php">
               <button
                 className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-lg text-sm font-medium text-white"
                 aria-label="Login to MGUG ERP"
