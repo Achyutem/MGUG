@@ -195,7 +195,7 @@ export const InfoPopup: FC = () => {
         </div>
         <div className="mt-auto pt-6 flex justify-end">
           <a
-            href="/register"
+            href="https://mgug.ac.in/academics/programmes_list.php"
             className="rounded-lg bg-orange-500 px-6 py-3 text-base lg:text-lg font-semibold text-white transition-all duration-200 hover:bg-orange-600 hover:scale-105 active:scale-95 shadow-lg"
           >
             Register Now
