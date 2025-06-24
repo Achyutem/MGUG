@@ -4,7 +4,7 @@ import {
   PopoverAnchor,
 } from "@/components/ui/popover";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import type { MegaMenuSection } from "@/utils/data";
+import type { MegaMenuSection } from "@/utils/menuData";
 import { Link } from "react-router-dom";
 
 interface MegaMenuProps {
