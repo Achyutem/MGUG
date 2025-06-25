@@ -1,5 +1,6 @@
+import { UseLanguage } from "@/context/languageContext";
+import type { MegaMenuSection } from "@/utils/types";
 import { FaChevronRight, FaExternalLinkAlt } from "react-icons/fa";
-import type { MegaMenuSection } from "@/utils/menuData";
 import { Link } from "react-router-dom";
 
 interface MobileMenuSectionProps {
@@ -13,6 +14,7 @@ export const MobileMenuSection = ({
   isOpen,
   onToggle,
 }: MobileMenuSectionProps) => {
+  const { language } = UseLanguage();
   const isExternal = (url: string) => url.startsWith("http");
 
   const linkBaseClasses =
@@ -67,13 +69,14 @@ export const MobileMenuSection = ({
   };
 
   return (
-    <div className="border-b border-white/10 last:border-0">
+    <div className="border-b border-white/10 last:border-0 py-2">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-3 text-left text-gray-300 hover:text-orange-400 transition-colors"
+        className="w-full flex items-center justify-between py-2 text-left text-gray-300 hover:text-orange-400 transition-colors"
         aria-expanded={isOpen}
+        aria-label={`Toggle ${section.label[language]} section`}
       >
-        <span className="font-medium">{section.label}</span>
+        <span className="text-base font-medium">{section.label[language]}</span>
         <FaChevronRight
           className={`w-4 h-4 transition-transform ${
             isOpen ? "rotate-90" : ""
@@ -86,11 +89,14 @@ export const MobileMenuSection = ({
           {section.subSections.map((subSection, index) => (
             <div key={index}>
               {subSection.type === "link" ? (
-                <MenuLink href={subSection.href} label={subSection.label} />
+                <MenuLink
+                  href={subSection.href}
+                  label={subSection.label[language]}
+                />
               ) : (
                 <div className="mt-3">
                   <h4 className="text-orange-400 font-medium text-sm mb-2">
-                    {subSection.label}
+                    {subSection.label[language]}
                   </h4>
                   {subSection.subSections && (
                     <div className="space-y-1 pl-3 border-l border-gray-700">
@@ -100,7 +106,7 @@ export const MobileMenuSection = ({
                             <NestedMenuLink
                               key={nestedIndex}
                               href={nestedSection.href}
-                              label={nestedSection.label}
+                              label={nestedSection.label[language]}
                             />
                           )
                       )}

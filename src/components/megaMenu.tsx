@@ -4,16 +4,12 @@ import {
   PopoverAnchor,
 } from "@/components/ui/popover";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import type { MegaMenuSection } from "@/utils/menuData";
 import { Link } from "react-router-dom";
-
-interface MegaMenuProps {
-  items: MegaMenuSection[];
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { UseLanguage } from "@/context/languageContext";
+import type { MegaMenuProps } from "@/utils/types";
 
 export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
+  const { language } = UseLanguage();
   const isExternal = (url: string) => url.startsWith("http");
 
   const MenuLink = ({ href, label }: { href: string; label: string }) => {
@@ -88,7 +84,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
             {items.map((section, index) => (
               <div key={index} className="space-y-4">
                 <h3 className="text-orange-400 font-semibold text-lg border-b border-orange-500/30 pb-2">
-                  {section.label}
+                  {section.label[language]}
                 </h3>
                 {section.subSections && (
                   <div className="space-y-2">
@@ -97,12 +93,12 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
                         {subSection.type === "link" ? (
                           <MenuLink
                             href={subSection.href}
-                            label={subSection.label}
+                            label={subSection.label[language]}
                           />
                         ) : (
                           <div className="mt-4">
                             <h4 className="text-orange-400 font-medium text-sm mb-2 pl-2">
-                              {subSection.label}
+                              {subSection.label[language]}
                             </h4>
                             {subSection.subSections && (
                               <div className="space-y-1 pl-4 border-l border-gray-700">
@@ -112,7 +108,7 @@ export const MegaMenu = ({ items, isOpen, onClose }: MegaMenuProps) => {
                                       <NestedMenuLink
                                         key={nestedIndex}
                                         href={nestedSection.href}
-                                        label={nestedSection.label}
+                                        label={nestedSection.label[language]}
                                       />
                                     )
                                 )}
