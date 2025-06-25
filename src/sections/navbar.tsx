@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { IoMdMenu } from "react-icons/io";
-import { megaMenus, menuItems, type MegaMenus } from "@/utils/menuData";
 import { MegaMenu } from "@/components/megaMenu";
 import { MobileMenuSection } from "@/components/mobileMenuSection";
 import openSiennaMenu from "@/utils/sienna";
 import { FaUniversalAccess, FaChevronDown } from "react-icons/fa";
 import LanguageToggle from "@/components/languageSwitcher";
+import { UseLanguage } from "@/context/languageContext";
+import { menuItems, megaMenus, privacy } from "@/utils/menuData";
+import type { MegaMenus } from "@/utils/types";
 
 export default function Navbar() {
+  const { language } = UseLanguage();
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileExpandedSections, setMobileExpandedSections] = useState<{
@@ -45,16 +48,15 @@ export default function Navbar() {
               aria-label="MGUG Home"
             >
               <img
-                loading="eager"
+                loading="lazy"
                 src="/logo.png"
                 alt="Mahayogi Gorakhnath University Gorakhpur Logo"
                 className="w-10 h-10 rounded-xl"
               />
-              <div className="text-2xl bg-orange-400 bg-clip-text text-transparent font-bold">
+              <div className="text-2xl bg-orange-400 bg-clip-text text-transparent font-bold uppercase">
                 MGUG
               </div>
             </a>
-            <LanguageToggle />
           </div>
 
           {/* Links - Desktop */}
@@ -62,41 +64,41 @@ export default function Navbar() {
             className="hidden lg:flex items-center space-x-8"
             role="navigation"
           >
-            {menuItems.map((item) => {
-              const hasMegaMenu = item in megaMenus;
-              const isMegaMenuOpen = activeMegaMenu === item;
+            {menuItems.map((item, index) => {
+              const hasMegaMenu = item.english in megaMenus;
+              const isMegaMenuOpen = activeMegaMenu === item.english;
 
               if (!hasMegaMenu) {
                 return (
                   <a
-                    key={item}
+                    key={index}
                     href={
-                      item === "Home"
+                      item.english === "Home"
                         ? "/"
-                        : item === "Research"
+                        : item.english === "Research"
                         ? "https://mgug.ac.in/research/re_facility.php"
-                        : item === "Contact"
+                        : item.english === "Contact"
                         ? "/contact"
-                        : `#${item.toLowerCase()}`
+                        : `#${item.english.toLowerCase()}`
                     }
-                    className=" font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
-                    aria-label={`Navigate to ${item} page`}
+                    className="font-medium text-white hover:text-orange-400 transition-all duration-200 hover:scale-105"
+                    aria-label={`Navigate to ${item[language]} page`}
                   >
-                    {item}
+                    {item[language]}
                   </a>
                 );
               }
 
               return (
-                <div key={item} className="relative">
+                <div key={index} className="relative">
                   <button
-                    onClick={() => handleMegaMenuToggle(item)}
+                    onClick={() => handleMegaMenuToggle(item.english)}
                     className="flex items-center space-x-1 transition-colors font-medium text-white hover:text-orange-400"
                     aria-expanded={isMegaMenuOpen}
-                    aria-controls={`mega-menu-${item.toLowerCase()}`}
-                    aria-label={`Toggle ${item} mega menu`}
+                    aria-controls={`mega-menu-${item.english.toLowerCase()}`}
+                    aria-label={`Toggle ${item[language]} mega menu`}
                   >
-                    <span>{item}</span>
+                    <span>{item[language]}</span>
                     <FaChevronDown
                       className={`w-4 h-4 transition-transform ${
                         isMegaMenuOpen ? "rotate-180" : ""
@@ -105,7 +107,7 @@ export default function Navbar() {
                     />
                   </button>
                   <MegaMenu
-                    items={megaMenus[item as keyof MegaMenus]}
+                    items={megaMenus[item.english as keyof MegaMenus]}
                     isOpen={isMegaMenuOpen}
                     onClose={closeMegaMenu}
                   />
@@ -114,29 +116,31 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right: Apply + Menu */}
+          {/* Right: Actions - Language Toggle, Accessibility, Login, Menu */}
           <div className="flex items-center space-x-2 lg:space-x-4">
+            <LanguageToggle />
             <button
               onClick={openSiennaMenu}
-              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] font-2xl transition-all duration-200 hover:scale-105 hover:text-orange-400"
+              className="p-1 md:p-[6px] lg:p-[8px] xl:p-[10px] transition-all duration-200 hover:scale-105 hover:text-orange-500"
+              aria-label="Open accessibility menu"
             >
-              <FaUniversalAccess size={28} />
+              <FaUniversalAccess size={24} />
             </button>
-            {/* Apply (Mobile) */}
+            {/* Login (Mobile) */}
             <a href="https://erp.mgug.ac.in/login.php">
               <button
-                className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-md font-medium lg:hidden text-white"
+                className="px-2 py-1 text-sm bg-orange-500 hover:bg-orange-700 text-white font-medium rounded-md transition-colors lg:hidden transform duration-200 hover:scale-105]"
                 aria-label="Login to MGUG ERP"
               >
-                Login
+                {language === "hindi" ? "लॉगिन" : "Login"}
               </button>
             </a>
 
-            {/* Mobile Sheet Menu */}
+            {/* Mobile Menu Toggle */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <button
-                  className="lg:hidden text-white hover:text-orange-400"
+                  className="lg:hidden text-white hover:text-orange-400 transition-colors"
                   aria-label="Toggle mobile menu"
                   aria-expanded={mobileMenuOpen}
                   aria-controls="mobile-menu"
@@ -156,55 +160,55 @@ export default function Navbar() {
                     className="mt-6 space-y-4 text-base font-medium max-h-[calc(100vh-12rem)] overflow-y-auto"
                     aria-label="Mobile menu links"
                   >
-                    {menuItems.map((item) => {
-                      const hasMegaMenu = item in megaMenus;
+                    {menuItems.map((item, index) => {
+                      const hasMegaMenu = item.english in megaMenus;
 
                       if (!hasMegaMenu) {
                         return (
                           <a
-                            key={item}
+                            key={index}
                             href={
-                              item === "Home"
+                              item.english === "Home"
                                 ? "/"
-                                : item === "Research"
+                                : item.english === "Research"
                                 ? "https://mgug.ac.in/research/re_facility.php"
-                                : item === "Contact"
+                                : item.english === "Contact"
                                 ? "/contact"
-                                : `#${item.toLowerCase()}`
+                                : `#${item.english.toLowerCase()}`
                             }
                             onClick={() => setMobileMenuOpen(false)}
                             className="block text-white hover:text-orange-400 transition-colors tracking-wide py-2"
-                            aria-label={`Navigate to ${item} page`}
+                            aria-label={`Navigate to ${item[language]} page`}
                           >
-                            {item}
+                            {item[language]}
                           </a>
                         );
                       }
 
                       return (
                         <div
-                          key={item}
+                          key={index}
                           className="border-t border-white/20 pt-4 first:border-0 first:pt-0"
                           role="group"
-                          aria-label={`${item} menu section`}
+                          aria-label={`${item[language]} menu section`}
                         >
                           <h3 className="text-orange-400 font-semibold text-lg mb-3">
-                            {item}
+                            {item[language]}
                           </h3>
                           <div className="space-y-1">
-                            {megaMenus[item as keyof MegaMenus].map(
-                              (section, index) => (
+                            {megaMenus[item.english as keyof MegaMenus].map(
+                              (section, sectionIndex) => (
                                 <MobileMenuSection
-                                  key={index}
+                                  key={sectionIndex}
                                   section={section}
                                   isOpen={
                                     mobileExpandedSections[
-                                      `${item}-${section.label}`
+                                      `${item[language]}-${section.label[language]}`
                                     ] || false
                                   }
                                   onToggle={() =>
                                     toggleMobileSection(
-                                      `${item}-${section.label}`
+                                      `${item[language]}-${section.label[language]}`
                                     )
                                   }
                                 />
@@ -217,38 +221,42 @@ export default function Navbar() {
                   </nav>
 
                   {/* Footer */}
-                  <div className="mt-16 border-t border-white/20 pt-6 text-sm text-gray-400 space-y-1">
+                  <div className="mt-16 border-t border-white/20 pt-6 text-sm text-gray-400 space-y-2">
                     <p className="font-medium text-white/80">
-                      Explore MGUG deeply
+                      {language === "hindi"
+                        ? "MGUG को गहराई से जानें"
+                        : "Explore MGUG deeply"}
                     </p>
                     <div className="flex space-x-4">
-                      <a
-                        href="#"
-                        className="hover:text-orange-400"
-                        aria-label="View Privacy policy"
-                      >
-                        Privacy
-                      </a>
-                      <a
-                        href="#"
-                        className="hover:text-orange-400"
-                        aria-label="View Terms of service"
-                      >
-                        Terms
-                      </a>
+                      {privacy
+                        .filter((item) =>
+                          ["Terms & Conditions", "Policy"].includes(
+                            item.label.english
+                          )
+                        )
+                        .map((item, index) => (
+                          <a
+                            key={index}
+                            href={item.href}
+                            className="hover:text-orange-400 transition-colors"
+                            aria-label={`View ${item.label[language]}`}
+                          >
+                            {item.label[language]}
+                          </a>
+                        ))}
                     </div>
                   </div>
                 </div>
               </SheetContent>
             </Sheet>
 
-            {/* Apply (Desktop) */}
+            {/* Login (Desktop) */}
             <a href="https://erp.mgug.ac.in/login.php">
               <button
-                className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 transform transition duration-300 hover:scale-105 rounded-lg text-sm font-medium text-white"
+                className="hidden lg:inline px-6 py-2 bg-orange-500 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors transform duration-300 hover:scale-105"
                 aria-label="Login to MGUG ERP"
               >
-                Login
+                {language === "hindi" ? "लॉगिन" : "Login"}
               </button>
             </a>
           </div>
