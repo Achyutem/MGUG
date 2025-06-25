@@ -1,3 +1,31 @@
+type MegaMenuHeader = {
+  type: "header";
+  label: Title;
+  href?: never;
+  subSections?: MegaMenuSection[];
+};
+
+export interface MegaMenuProps {
+  items: MegaMenuSection[];
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+type MegaMenuLink = {
+  type: "link";
+  label: Title;
+  href: string;
+  subSections?: MegaMenuSection[];
+};
+
+export type MegaMenuSection = MegaMenuHeader | MegaMenuLink;
+
+export type MegaMenus = {
+  Students: MegaMenuSection[];
+  Administration: MegaMenuSection[];
+  More: MegaMenuSection[];
+};
+
 export interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
