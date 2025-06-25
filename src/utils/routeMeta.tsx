@@ -24,6 +24,9 @@ import Contact from "@/pages/contact";
 import Vision from "@/pages/More/About/vision";
 import AcademicCalendar from "@/pages/Students/Academics/academicCalendar";
 import ExaminationManual from "@/pages/Students/Academics/examinationManual";
+import OurIdeals from "@/pages/More/About/ourIdeals";
+import Inspiration from "@/pages/More/About/inspiration";
+import Leadership from "@/pages/More/About/leadership";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -42,6 +45,17 @@ export const routeMeta = [
 
   // More
   { title: "About Us", path: "/about", element: <AboutUs /> },
+  { title: "Our Ideals", path: "/our-ideals", element: <OurIdeals /> },
+  {
+    title: "Our Source of Inspiration",
+    path: "/our-source-of-inspiration",
+    element: <Inspiration />,
+  },
+  {
+    title: "Inspirational Leadership",
+    path: "/Leadership",
+    element: <Leadership />,
+  },
   { title: "Vision and Mission", path: "/vision", element: <Vision /> },
   {
     title: "University Logo",
