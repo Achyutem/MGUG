@@ -1,3 +1,4 @@
+import { UseLanguage } from "@/context/languageContext";
 import MainLayout from "@/layouts/homeLayout";
 import {
   financeCommitteeData,
@@ -6,13 +7,14 @@ import {
 import type { CommitteeMember } from "@/utils/types";
 
 const FinanceCommittee = () => {
+  const { language } = UseLanguage();
   return (
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-5xl text-left">
             <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
-              {financeCommitteeTitles.heading.english}
+              {financeCommitteeTitles.heading[language]}
             </h1>
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
               <div className="overflow-x-auto">
@@ -20,16 +22,20 @@ const FinanceCommittee = () => {
                   <thead>
                     <tr className="bg-orange-500/20 text-orange-400">
                       <th className="p-4 font-semibold rounded-tl-xl">
-                        {financeCommitteeTitles.headers.srNo.english}
+                        {financeCommitteeTitles.headers.srNo[language]}
                       </th>
                       <th className="p-4 font-semibold">
-                        {financeCommitteeTitles.headers.nameDesignation.english}
+                        {
+                          financeCommitteeTitles.headers.nameDesignation[
+                            language
+                          ]
+                        }
                       </th>
                       <th className="p-4 font-semibold">
-                        {financeCommitteeTitles.headers.role.english}
+                        {financeCommitteeTitles.headers.role[language]}
                       </th>
                       <th className="p-4 font-semibold rounded-tr-xl">
-                        {financeCommitteeTitles.headers.status.english}
+                        {financeCommitteeTitles.headers.status[language]}
                       </th>
                     </tr>
                   </thead>
@@ -54,18 +60,18 @@ const FinanceCommittee = () => {
                         </td>
                         <td className="p-4">
                           <span className="font-bold text-orange-400">
-                            {member.name.english}
+                            {member.name[language]}
                           </span>
-                          {member.designation.english && (
+                          {member.designation[language] && (
                             <>
                               <br />
                               <span className="font-light text-sm text-white">
-                                {member.designation.english}
+                                {member.designation[language]}
                               </span>
                             </>
                           )}
                         </td>
-                        <td className="p-4">{member.role.english}</td>
+                        <td className="p-4">{member.role[language]}</td>
                         <td
                           className={`p-4 ${
                             member.srNo === financeCommitteeData.length
@@ -73,7 +79,7 @@ const FinanceCommittee = () => {
                               : ""
                           }`}
                         >
-                          {member.status.english}
+                          {member.status[language]}
                         </td>
                       </tr>
                     ))}
