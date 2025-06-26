@@ -179,3 +179,155 @@ export interface BoardOfStudiesData {
   medicalBiochemistry: BoardSection;
   biotechnology: BoardSection;
 }
+
+export interface MainDataType {
+  aboutMain: {
+    hindi: {
+      heading: string;
+      description: string;
+      studentsLabel: string;
+      facultyLabel: string;
+      programsLabel: string;
+      placementRateLabel: string;
+    };
+    english: {
+      heading: string;
+      description: string;
+      studentsLabel: string;
+      facultyLabel: string;
+      programsLabel: string;
+      placementRateLabel: string;
+    };
+  };
+  academic: {
+    hindi: {
+      heading: string;
+      description: string;
+      medicalSurgeryTitle: string;
+      medicalSurgeryDescription: string;
+      managementCommerceTitle: string;
+      managementCommerceDescription: string;
+      alliedHealthTitle: string;
+      alliedHealthDescription: string;
+      nursingBiomedicalTitle: string;
+      nursingBiomedicalDescription: string;
+    };
+    english: {
+      heading: string;
+      description: string;
+      medicalSurgeryTitle: string;
+      medicalSurgeryDescription: string;
+      managementCommerceTitle: string;
+      managementCommerceDescription: string;
+      alliedHealthTitle: string;
+      alliedHealthDescription: string;
+      nursingBiomedicalTitle: string;
+      nursingBiomedicalDescription: string;
+    };
+  };
+  admission: {
+    hindi: {
+      heading: string;
+      description: string;
+      applyButton: string;
+      brochureButton: string;
+    };
+    english: {
+      heading: string;
+      description: string;
+      applyButton: string;
+      brochureButton: string;
+    };
+  };
+  contact: {
+    hindi: {
+      heading: string;
+      description: string;
+      addressLabel: string;
+      address: string;
+      phoneLabel: string;
+      phone: string;
+      emailLabel: string;
+      email: string;
+    };
+    english: {
+      heading: string;
+      description: string;
+      addressLabel: string;
+      address: string;
+      phoneLabel: string;
+      phone: string;
+      emailLabel: string;
+      email: string;
+    };
+  };
+  main: {
+    hindi: {
+      badge: string;
+      universityName1: string;
+      universityName2: string;
+      animatedText1: string;
+      animatedText2: string;
+      description: string;
+      exploreButton: string;
+      virtualTourButton: string;
+    };
+    english: {
+      badge: string;
+      universityName1: string;
+      universityName2: string;
+      animatedText1: string;
+      animatedText2: string;
+      description: string;
+      exploreButton: string;
+      virtualTourButton: string;
+    };
+  };
+  whyMGUG: {
+    hindi: {
+      heading: string;
+      description: string;
+      academicExcellenceTitle: string;
+      academicExcellenceDescription: string;
+      researchExcellenceTitle: string;
+      researchExcellenceDescription: string;
+      modernInfrastructureTitle: string;
+      modernInfrastructureDescription: string;
+      globalPartnershipsTitle: string;
+      globalPartnershipsDescription: string;
+      industryFocusedTitle: string;
+      industryFocusedDescription: string;
+      digitalLearningTitle: string;
+      digitalLearningDescription: string;
+    };
+    english: {
+      heading: string;
+      description: string;
+      academicExcellenceTitle: string;
+      academicExcellenceDescription: string;
+      researchExcellenceTitle: string;
+      researchExcellenceDescription: string;
+      modernInfrastructureTitle: string;
+      modernInfrastructureDescription: string;
+      globalPartnershipsTitle: string;
+      globalPartnershipsDescription: string;
+      industryFocusedTitle: string;
+      industryFocusedDescription: string;
+      digitalLearningTitle: string;
+      digitalLearningDescription: string;
+    };
+  };
+}
+
+export interface AntiRaggingMember {
+  no: number;
+  name: Title;
+  designation: Title;
+  phone: string;
+}
+
+export interface ItCommitteeMember {
+  image: string;
+  name: Title;
+  designation: Title;
+}
