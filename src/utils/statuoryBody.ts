@@ -187,8 +187,8 @@ export const academicCouncilData: AcademicCouncilMember[] = [
   {
     srNo: 11,
     name: {
-      hindi: "डॉ. तरुन श्याम, विभागाध्यक्ष, एम.बी.ए.",
-      english: "Dr. Tarun Shyam, Head, MBA Department",
+      hindi: "डॉ. तरुन श्याम, विभागाध्यक्ष, प्रबंधन विभाग",
+      english: "Dr. Tarun Shyam, Head, Department of Management",
     },
     type: {
       hindi: "पदेन",
