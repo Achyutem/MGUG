@@ -5,9 +5,18 @@ import {
   IoGlobeOutline,
   IoMailOpenOutline,
 } from "react-icons/io5";
-import { AntiRaggingcommittee, AntiRaggingsquad } from "@/utils/committeeData";
+import type { Title } from "@/utils/types";
+import { UseLanguage } from "@/context/languageContext";
+import {
+  AntiRaggingcommittee,
+  antiRaggingContent,
+  AntiRaggingsquad,
+} from "@/utils/committeeData";
 
 const AntiRagging = () => {
+  const { language } = UseLanguage();
+  const t = antiRaggingContent[language];
+
   return (
     <MainLayout>
       <section className="py-12 px-4 md:px-16 max-w-7xl mx-auto text-slate-200">
@@ -15,7 +24,11 @@ const AntiRagging = () => {
         <div className="mb-8 rounded-lg overflow-hidden">
           <img
             src="/anti-ragging.jpg"
-            alt="Anti-Ragging Awareness"
+            alt={
+              language === "hindi"
+                ? "रैगिंग विरोधी जागरूकता"
+                : "Anti-Ragging Awareness"
+            }
             width={1200}
             height={400}
             className="w-full object-cover"
@@ -24,51 +37,36 @@ const AntiRagging = () => {
 
         {/* Heading */}
         <h1 className="text-4xl font-bold text-orange-400 mb-4 text-center uppercase">
-          Anti-Ragging Policy
+          {t.heading}
         </h1>
 
         {/* Definition Section */}
         <div className="bg-red-900/30 border-l-4 border-red-500 p-6 rounded-lg mb-6">
           <h2 className="text-2xl font-semibold mb-3 text-orange-300 flex items-center gap-2">
-            <IoAlertCircleOutline className="text-red-400" /> What is Ragging?
+            <IoAlertCircleOutline className="text-red-400" /> {t.whatIsRagging}
           </h2>
-          <p>
-            “Any disorderly conduct... embarrassment, and adversely affect the
-            physical or psychological well-being of a fresher or junior
-            student.”
-          </p>
+          <p>{t.raggingDefinition}</p>
         </div>
 
         {/* Guidelines & UGC Info */}
         <div className="space-y-6 mb-6">
-          <p>
-            Students who experience or witness ragging must report it
-            immediately to any committee member. The Dean of Students' Welfare
-            will convene a meeting within 3 days to initiate investigation.
-          </p>
+          <p>{t.reportInstruction}</p>
           <ul className="list-disc list-inside space-y-1 pl-4 text-sm md:text-base">
-            <li>Verbal Ragging: 1 year imprisonment or fine</li>
-            <li>Severe Verbal Ragging: 7 years imprisonment with fine</li>
-            <li>Physical Ragging: 7 years imprisonment with fine</li>
-            <li>Sexual Ragging: 7 years rigorous imprisonment with fine</li>
+            <li>{t.punishments.verbal}</li>
+            <li>{t.punishments.severeVerbal}</li>
+            <li>{t.punishments.physical}</li>
+            <li>{t.punishments.sexual}</li>
           </ul>
         </div>
 
         {/* National Helpline */}
         <div className="bg-sky-800/40 p-4 rounded-lg border border-sky-600 mb-6">
           <h2 className="text-lg font-semibold mb-2 text-sky-300">
-            {/*📞*/} National Anti-Ragging Helpline
+            {t.helpline.title}
           </h2>
           <p>
             <FaPhoneAlt className="inline w-4 h-4 mr-2 text-sky-300" />{" "}
-            Toll-Free:{" "}
-            <a
-              href="tel:1800-180-5522"
-              className="hover:text-orange-400 hover:underline"
-              aria-label="Call 1800-180-5522"
-            >
-              <strong>1800-180-5522</strong>
-            </a>
+            {t.helpline.tollFree}
           </p>
           <p>
             <IoMailOpenOutline className="inline w-4 h-4 mr-2 text-sky-300" />{" "}
@@ -77,7 +75,7 @@ const AntiRagging = () => {
               href="mailto:helpline@antiragging.in"
               className="underline text-sky-200"
             >
-              helpline@antiragging.in
+              {t.helpline.email}
             </a>
           </p>
           <p>
@@ -89,7 +87,7 @@ const AntiRagging = () => {
               rel="noopener noreferrer"
               className="underline text-sky-200"
             >
-              www.antiragging.in
+              {t.helpline.website}
             </a>
           </p>
         </div>
@@ -98,20 +96,20 @@ const AntiRagging = () => {
         <div className="text-center mb-10">
           <a href="https://mgug.ac.in/academics/anti_rag_form.php">
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-full shadow transition">
-              Click to Report!
+              {t.reportButton}
             </button>
           </a>
         </div>
 
         {/* Anti-Ragging Committee Table */}
         <h2 className="text-2xl font-semibold mb-2 text-orange-300">
-          Anti-Ragging Committee
+          {t.committeeHeading}
         </h2>
         <TableList data={AntiRaggingcommittee} />
 
         {/* Anti-Ragging Squad Table */}
         <h2 className="text-2xl font-semibold mt-10 mb-2 text-orange-300">
-          Anti-Ragging Squad
+          {t.squadHeading}
         </h2>
         <TableList data={AntiRaggingsquad} />
       </section>
@@ -125,34 +123,44 @@ export default AntiRagging;
 const TableList = ({
   data,
 }: {
-  data: Array<{ no: number; name: string; designation: string; phone: string }>;
-}) => (
-  <div className="overflow-x-auto rounded-lg border border-slate-700 mb-8">
-    <table className="min-w-full text-left">
-      <thead className="bg-orange-500/20 text-orange-400">
-        <tr>
-          <th className="p-4">S. No.</th>
-          <th className="p-4">Name</th>
-          <th className="p-4">Designation</th>
-          <th className="p-4">Contact</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map(({ no, name, designation, phone }) => (
-          <tr
-            key={no}
-            className="border-b border-slate-700 hover:bg-slate-800 transition"
-          >
-            <td className="p-4">{no}</td>
-            <td className="p-4">{name}</td>
-            <td className="p-4">{designation}</td>
-            <td className="p-4 flex items-center gap-2">
-              <FaPhoneAlt className="w-4 h-4 text-sky-300" />
-              <span>{phone}</span>
-            </td>
+  data: Array<{ no: number; name: Title; designation: Title; phone: string }>;
+}) => {
+  const { language } = UseLanguage();
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-slate-700 mb-8">
+      <table className="min-w-full text-left">
+        <thead className="bg-orange-500/20 text-orange-400">
+          <tr>
+            <th className="p-4">
+              {language === "hindi" ? "क्रमांक" : "S. No."}
+            </th>
+            <th className="p-4">{language === "hindi" ? "नाम" : "Name"}</th>
+            <th className="p-4">
+              {language === "hindi" ? "पदनाम" : "Designation"}
+            </th>
+            <th className="p-4">
+              {language === "hindi" ? "संपर्क" : "Contact"}
+            </th>
           </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+        </thead>
+        <tbody>
+          {data.map(({ no, name, designation, phone }) => (
+            <tr
+              key={no}
+              className="border-b border-slate-700 hover:bg-slate-800 transition"
+            >
+              <td className="p-4">{no}</td>
+              <td className="p-4">{name[language]}</td>
+              <td className="p-4">{designation[language]}</td>
+              <td className="p-4 flex items-center gap-2">
+                <FaPhoneAlt className="w-4 h-4 text-sky-300" />
+                <span>{phone}</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
