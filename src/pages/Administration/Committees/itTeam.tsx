@@ -1,13 +1,19 @@
 import MainLayout from "@/layouts/homeLayout";
 import { MdComputer } from "react-icons/md";
-import { ItCommitteeMembers } from "@/utils/committeeData";
-//
-const ItCommittee = () => {
+import { UseLanguage } from "@/context/languageContext";
+import { ItCommitteeMembers, itCommitteeTitles } from "@/utils/committeeData";
+
+const ItTeam = () => {
+  const { language } = UseLanguage();
+  const t = itCommitteeTitles;
+
   return (
     <MainLayout>
       <section className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-orange-400">IT Committee</h1>
+          <h1 className="text-4xl font-bold text-orange-400">
+            {t.heading[language]}
+          </h1>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -20,7 +26,7 @@ const ItCommittee = () => {
                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-orange-400 shadow-md transform rotate-3 hover:rotate-0 transition-transform duration-300">
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={member.name[language]}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -29,10 +35,12 @@ const ItCommittee = () => {
               <div className="flex-1">
                 <div className="flex items-start mb-1 text-orange-400">
                   <MdComputer className="mr-2 mt-1" size={18} />
-                  <h3 className="text-lg font-semibold">{member.name}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {member.name[language]}
+                  </h3>
                 </div>
                 <p className="text-sm text-slate-300 mt-1">
-                  {member.designation}
+                  {member.designation[language]}
                 </p>
               </div>
             </div>
@@ -43,4 +51,4 @@ const ItCommittee = () => {
   );
 };
 
-export default ItCommittee;
+export default ItTeam;

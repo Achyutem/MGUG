@@ -19,7 +19,6 @@ import FinanceCommittee from "@/pages/Administration/Committees/financeCommittee
 import ExaminationCommittee from "@/pages/Administration/Committees/examinationCommittee";
 import SGRCAndOmbudsperson from "@/pages/Administration/Committees/sgrcAndOmbuds";
 import AntiRagging from "@/pages/Administration/Committees/antiRagging";
-import ItCommittee from "@/pages/Administration/Committees/itCommittee";
 import Contact from "@/pages/contact";
 import Vision from "@/pages/More/About/vision";
 import AcademicCalendar from "@/pages/Students/Academics/academicCalendar";
@@ -27,6 +26,7 @@ import ExaminationManual from "@/pages/Students/Academics/examinationManual";
 import OurIdeals from "@/pages/More/About/ourIdeals";
 import Inspiration from "@/pages/More/About/inspiration";
 import Leadership from "@/pages/More/About/leadership";
+import ItTeam from "@/pages/Administration/Committees/itTeam";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -159,8 +159,8 @@ export const routeMeta = [
     element: <AntiRagging />,
   },
   {
-    title: "IT Committee",
-    path: "/Committee/it-committee",
-    element: <ItCommittee />,
+    title: "IT Team",
+    path: "/Committee/it-team",
+    element: <ItTeam />,
   },
 ];
