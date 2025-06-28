@@ -1,5 +1,5 @@
 import { UseLanguage } from "@/context/languageContext";
-import { translations } from "@/utils/footerData";
+import { footerTranslations } from "@/utils/mainPageData";
 import { impLinks, privacy } from "@/utils/menuData";
 import { FaWhatsapp } from "react-icons/fa6";
 import {
@@ -37,16 +37,16 @@ export default function Footer() {
                 />
                 <div>
                   <div className="text-lg font-bold text-orange-400">
-                    {translations[language].universityName}
+                    {footerTranslations[language].universityName}
                   </div>
                   <div className="text-sm text-white">
-                    {translations[language].tagline}
+                    {footerTranslations[language].tagline}
                   </div>
                 </div>
               </div>
               <div className="mt-4">
                 <h3 className="text-lg font-semibold text-orange-400 mb-2">
-                  {translations[language].followUs}
+                  {footerTranslations[language].followUs}
                 </h3>
                 <div className="flex items-center gap-4 text-2xl">
                   <a
@@ -88,7 +88,7 @@ export default function Footer() {
               {/* Contact */}
               <div className="min-w-[250px] max-w-[300px]">
                 <h3 className="text-lg font-semibold text-orange-400 mb-2">
-                  {translations[language].contact}
+                  {footerTranslations[language].contact}
                 </h3>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li className="flex items-center gap-2">
@@ -131,14 +131,14 @@ export default function Footer() {
                   </li>
                 </ul>
                 <p className="text-sm text-gray-400 mt-4">
-                  {translations[language].address}
+                  {footerTranslations[language].address}
                 </p>
               </div>
 
               {/* Important Links */}
               <div className="min-w-[200px] max-w-[300px]">
                 <h3 className="text-lg font-semibold text-orange-400 mb-2">
-                  {translations[language].importantLinks}
+                  {footerTranslations[language].importantLinks}
                 </h3>
                 <ul className="space-y-1 text-sm text-gray-400">
                   {impLinks.map((item: LinkItem, index: number) => (
@@ -157,7 +157,7 @@ export default function Footer() {
               {/* Policy & Reports */}
               <div className="min-w-[100px] max-w-[250px]">
                 <h3 className="text-lg font-semibold text-orange-400 mb-2">
-                  {translations[language].policyAndReports}
+                  {footerTranslations[language].policyAndReports}
                 </h3>
                 <ul className="space-y-1 text-sm text-gray-400">
                   {privacy.map((item: LinkItem, index: number) => (
@@ -176,7 +176,7 @@ export default function Footer() {
           </div>
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-2">
-              {translations[language].copyright}
+              {footerTranslations[language].copyright}
             </p>
             <p className="text-orange-400 text-sm">स्वस्ति पन्थामनुचरेम</p>
           </div>
