@@ -465,10 +465,10 @@ export const megaMenus: MegaMenus = {
         {
           type: "link",
           label: {
-            hindi: "आईटी समिति",
-            english: "IT Committee",
+            hindi: "आईटी टीम",
+            english: "IT Team",
           },
-          href: "/Committee/it-committee",
+          href: "/Committee/it-team",
         },
       ],
     },
