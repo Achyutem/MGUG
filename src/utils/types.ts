@@ -180,7 +180,7 @@ export interface BoardOfStudiesData {
   biotechnology: BoardSection;
 }
 
-export interface MainDataType {
+export interface HomeDataType {
   aboutMain: {
     hindi: {
       heading: string;
