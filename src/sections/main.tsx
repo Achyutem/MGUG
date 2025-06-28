@@ -2,8 +2,12 @@ import AnimatedText from "@/components/animateText";
 import ImageCarousel from "@/components/imageCarousel";
 import { FaRegStar, FaChevronDown } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { UseLanguage } from "@/context/languageContext";
+import { HomePage } from "@/utils/mainPageData";
 
 export default function Main() {
+  const { language } = UseLanguage();
+  const t = HomePage.main[language];
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -24,24 +28,22 @@ export default function Main() {
             >
               <div className="w-full flex justify-center lg:justify-start mb-6 lg:mb-8">
                 <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 backdrop-blur-md rounded-full bg-blue-950/30 border border-gray-700">
-                  <FaRegStar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-400" />
+                  <FaRegStar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-500" />
                   <span className="text-sm sm:text-lg text-gray-300">
-                    Excellence in Education Since 2021
+                    {t.badge}
                   </span>
                 </div>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
                 <span className="block">
-                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    Mahayogi&nbsp;
+                  <span className="bg-orange-500 bg-clip-text text-transparent">
+                    {t.universityName1}
                   </span>
-                  <span className="text-white">Gorakhnath</span>
                 </span>
                 <span className="block">
-                  <span className="text-white">University&nbsp;</span>
-                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    Gorakhpur
+                  <span className="bg-orange-500 bg-clip-text text-transparent">
+                    {t.universityName2}
                   </span>
                 </span>
               </h1>
@@ -52,36 +54,34 @@ export default function Main() {
                   <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black text-white">
                     <span className="relative inline-block">
                       <AnimatedText
-                        text="REDEFINING"
+                        text={t.animatedText1}
                         speed={50}
                         delay={0}
                         loopInterval={6000}
-                        className="bg-orange-400 bg-clip-text text-transparent"
+                        className="bg-orange-500 bg-clip-text text-transparent"
                       />
                       <span className="absolute -inset-1 bg-gradient-to-r from-orange-600/20 to-amber-600/20 blur-lg -z-10 animate-pulse rounded"></span>
                     </span>
                     <br />
                     <span className="relative inline-block">
                       <AnimatedText
-                        text="EDUCATION"
+                        text={t.animatedText2}
                         speed={50}
                         delay={800}
                         loopInterval={6000}
-                        className="bg-orange-400 bg-clip-text text-transparent"
+                        className="bg-orange-500 bg-clip-text text-transparent"
                       />
                       <span className="absolute -inset-1 bg-gradient-to-r from-amber-600/20 to-orange-600/20 blur-lg -z-10 animate-pulse rounded"></span>
                     </span>
                   </h2>
                   <div className="mt-2 lg:mt-3 h-0.5 lg:h-1 w-20 sm:w-24 lg:w-32 mx-auto lg:ml-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full">
-                    <div className="h-full w-full bg-gradient-to-r from-amber-500 to-orange-500 rounded-full animate-pulse" />
+                    <div className="h-full w-full bg-orange-500 rounded-full animate-pulse" />
                   </div>
                 </div>
               </div>
 
               <p className="text-base sm:text-lg lg:text-lg xl:text-xl text-gray-400 mb-6 lg:mb-10 max-w-md lg:max-w-xl xl:max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Empowering minds, fostering innovation, and building the leaders
-                of tomorrow through world-class education and cutting-edge
-                research.
+                {t.description}
               </p>
 
               <div className="flex flex-row flex-wrap sm:flex-nowrap gap-2 sm:gap-3 justify-center lg:justify-start overflow-x-auto pl-1">
@@ -89,13 +89,13 @@ export default function Main() {
                   href="https://mgug.ac.in/academics/programmes_list.php"
                   className="shrink-0"
                 >
-                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-gradient-to-r from-orange-600 to-amber-600 hover:scale-105 transition-all duration-300">
-                    Explore Programs
+                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 hover:scale-105 transition-all duration-300">
+                    {t.exploreButton}
                   </button>
                 </a>
 
-                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-gray-900/50 border border-gray-700 hover:border-orange-500/50 hover:bg-gray-900/70 transition-all duration-300 shrink-0">
-                  Virtual Tour
+                <button className="whitespace-nowrap px-5 py-3 text-sm sm:text-base rounded-lg font-semibold bg-gray-900/50 border border-gray-700 hover:border-orange-500/50 hover:bg-gray-900/70 hover:text-orange-400 transition-all duration-300 shrink-0">
+                  {t.virtualTourButton}
                 </button>
               </div>
             </div>
