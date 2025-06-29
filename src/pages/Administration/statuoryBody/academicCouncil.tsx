@@ -2,16 +2,19 @@ import MainLayout from "@/layouts/homeLayout";
 import {
   academicCouncilData,
   academicCouncilTitles,
-} from "@/utils/statuoryBody";
+} from "@/utils/statuoryBodyData";
+import { UseLanguage } from "@/context/languageContext";
 
 const AcademicCouncil = () => {
+  const { language } = UseLanguage();
+
   return (
     <MainLayout>
       <section className="py-12 px-4 md:px-12 max-w-8xl mx-auto">
         <div className="flex flex-col items-center">
           <div className="w-full max-w-5xl text-left">
             <h1 className="text-4xl font-bold mb-8 text-orange-400 text-center">
-              {academicCouncilTitles.heading.english}
+              {academicCouncilTitles.heading[language]}
             </h1>
 
             <div className="p-6 sm:p-8 rounded-xl border border-slate-700">
@@ -20,16 +23,16 @@ const AcademicCouncil = () => {
                   <thead>
                     <tr className="bg-orange-500/20 text-orange-400">
                       <th className="p-4 font-semibold rounded-tl-xl">
-                        {academicCouncilTitles.headers.srNo.english}
+                        {academicCouncilTitles.headers.srNo[language]}
                       </th>
                       <th className="p-4 font-semibold">
-                        {academicCouncilTitles.headers.name.english}
+                        {academicCouncilTitles.headers.name[language]}
                       </th>
                       <th className="p-4 font-semibold">
-                        {academicCouncilTitles.headers.type.english}
+                        {academicCouncilTitles.headers.type[language]}
                       </th>
                       <th className="p-4 font-semibold rounded-tr-xl">
-                        {academicCouncilTitles.headers.role.english}
+                        {academicCouncilTitles.headers.role[language]}
                       </th>
                     </tr>
                   </thead>
@@ -41,11 +44,11 @@ const AcademicCouncil = () => {
                       >
                         <td className="p-4">{srNo}</td>
                         <td className="p-4 text-orange-400">
-                          {name.english}
+                          {name[language]}
                         </td>{" "}
-                        {/* 👈 colored */}
-                        <td className="p-4">{type.english}</td>
-                        <td className="p-4">{role.english}</td>
+                        {/* colored */}
+                        <td className="p-4">{type[language]}</td>
+                        <td className="p-4">{role[language]}</td>
                       </tr>
                     ))}
                   </tbody>
