@@ -1,6 +1,6 @@
 import MainLayout from "@/layouts/homeLayout";
 import { UseLanguage } from "@/context/languageContext";
-import { boardOfStudiesData } from "@/utils/statuoryBody";
+import { boardOfStudiesData } from "@/utils/statuoryBodyData";
 
 const BoardOfStudies = () => {
   const { language } = UseLanguage();
