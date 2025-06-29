@@ -2,6 +2,8 @@ import type {
   AcademicCouncilMember,
   AcademicCouncilTitles,
   BoardOfStudiesData,
+  EmpoweredBody,
+  GoverningBody,
 } from "./types";
 
 export const academicCouncilTitles: AcademicCouncilTitles = {
@@ -1126,6 +1128,192 @@ export const boardOfStudiesData: BoardOfStudiesData = {
           hindi: "सदस्य",
           english: "Member",
         },
+      },
+    ],
+  },
+};
+
+export const empoweredBodyData: EmpoweredBody = {
+  title: {
+    hindi: "सशक्त निकाय",
+    english: "Empowered Body",
+  },
+  description: {
+    hindi:
+      "गुरु श्री गोरखनाथ चित्सालय, प्रबंधन समिति, कुलपति और कुलसचिव मिलकर सशक्त निकाय का गठन करेंगे।",
+    english:
+      "Guru Shri Gorakhnath Chitisalaya, Management Committee, Vice-Chancellor, and Registrar shall constitute/form the Empowered Body.",
+  },
+  powers: {
+    hindi: [
+      "सशक्त निकाय को अधिनियम के प्रावधानों के अनुसार ऋण प्राप्त करने के उद्देश्य से विश्वविद्यालय की भूमि या अन्य संपत्तियों को किसी बैंक या अन्य वित्तीय संस्थानों के पास गिरवी रखने का अधिकार होगा।",
+      "विश्वविद्यालय का सशक्त निकाय समय-समय पर विश्वविद्यालय के किसी अधिकारी, प्राधिकारी, शिक्षक या कर्मचारी की वित्तीय शक्तियों की सीमा निर्धारित करने का अधिकार रखेगा।",
+      "सशक्त निकाय को उन सभी मामलों में निर्णय लेने का अधिकार होगा जो विशेष रूप से विश्वविद्यालय के किसी अधिकारी या प्राधिकारी को प्रदान नहीं किए गए हैं।",
+    ],
+    english: [
+      "Empowered Body shall have power to mortgage the land or other assets of the University to any bank or other financial institutions for the purpose of availing loan as per the provisions of the Act.",
+      "The Empowered Body of the University shall have power to determine the limits of the financial powers of any officer(s), authority, teacher, or employee of the university from time to time.",
+      "The Empowered Body shall have power to take decisions in all such matters which have not been specifically conferred on any Officer or Authority of the University.",
+    ],
+  },
+};
+
+export const governingBodyData: GoverningBody = {
+  title: {
+    hindi: "प्रशासनिक निकाय",
+    english: "Governing Body",
+  },
+  composition: {
+    hindi: {
+      description: "प्रशासनिक निकाय में निम्नलिखित शामिल होंगे:",
+      members: [
+        "कुलाधिपति - अध्यक्ष",
+        "प्रो कुलाधिपति - सदस्य",
+        "कुलपति - सदस्य",
+        "प्रायोजक निकाय द्वारा प्रबंधन समिति से नामित दो सदस्य।",
+        "प्रायोजक निकाय द्वारा नामित एक प्रख्यात शिक्षाविद।",
+        "प्रायोजक निकाय द्वारा नामित उद्योग/कॉरपोरेट क्षेत्र से एक सदस्य।",
+        "प्रायोजक निकाय द्वारा नामित एक कानूनी विशेषज्ञ।",
+        "प्रायोजक निकाय द्वारा नामित एक वित्तीय विशेषज्ञ।",
+        "कुलसचिव - पदेन सचिव।",
+        "प्रायोजक निकाय को प्रशासनिक निकाय में अधिकतम छह अतिरिक्त व्यक्तियों को नामित करने का अधिकार होगा।",
+      ],
+      note: "बशर्ते कि प्रशासनिक निकाय के सदस्यों की संख्या नौ से कम और पंद्रह से अधिक नहीं होगी।",
+    },
+    english: {
+      description: "The Governing Body shall consist of the following:",
+      members: [
+        "The Chancellor - Chairperson",
+        "The Pro Chancellor - Member",
+        "The Vice-Chancellor - Member",
+        "Two members to be nominated by the Sponsoring Body from management committee.",
+        "One eminent educationist to be nominated by the Sponsoring Body.",
+        "One member from the Industry/Corporate Sector to be nominated by the Sponsoring Body.",
+        "One Legal Expert to be nominated as member by the Sponsoring Body.",
+        "One Financial Expert to be nominated as member by the Sponsoring Body.",
+        "Registrar ex-officio Secretary.",
+        "The Sponsoring Body shall have the power to nominate up to six additional persons as members of governing body.",
+      ],
+      note: "Provided that the number of members of the Governing Body shall not be less than nine and more than fifteen.",
+    },
+  },
+  rules: {
+    hindi: [
+      {
+        label: "ख",
+        text: "नामित सदस्यों का कार्यकाल तीन वर्ष या अगले आदेश तक होगा।",
+      },
+      {
+        label: "ग",
+        text: "पदेन सदस्यों का कार्यकाल तब तक रहेगा जब तक वे उस पद पर रहते हैं जिसके आधार पर वे सदस्य हैं।",
+      },
+      {
+        label: "घ",
+        text: "प्रायोजक निकाय को लिखित कारणों के साथ प्रशासनिक निकाय के किसी भी सदस्य को हटाने का अधिकार होगा।",
+      },
+      {
+        label: "ङ",
+        text: "प्रशासनिक निकाय की बैठकें कुलाधिपति द्वारा उनकी पहल पर या प्रशासनिक निकाय के कम से कम चार सदस्यों द्वारा हस्ताक्षरित अनुरोध पर बुलाई जाएंगी।",
+      },
+      {
+        label: "च",
+        text: "प्रशासनिक निकाय की बैठकों में विचार किए गए सभी मुद्दों पर निर्णय उपस्थित सदस्यों के बहुमत से लिए जाएंगे।",
+      },
+      {
+        label: "छ",
+        text: "कुलाधिपति, यदि उपस्थित हों, तो प्रशासनिक निकाय की बैठकों की अध्यक्षता करेंगे। उनकी अनुपस्थिति में, कुलाधिपति प्रो कुलाधिपति या प्रशासनिक निकाय के किसी सदस्य को नामित कर सकते हैं।",
+      },
+      {
+        label: "ज",
+        text: "प्रत्येक बैठक की लिखित सूचना कुलसचिव द्वारा प्रत्येक सदस्य को बैठक की निर्धारित तारीख से कम से कम दो सप्ताह पहले भेजी जाएगी।",
+        note: "बशर्ते कि अध्यक्ष किसी जरूरी मामले पर विचार करने के लिए प्रशासनिक निकाय की विशेष बैठक को कम समय की सूचना पर बुला सकते हैं।",
+      },
+      {
+        label: "झ",
+        text: "सूचना को हाथ से, ई-मेल द्वारा या कार्यालय में दर्ज प्रत्येक सदस्य के पते पर पंजीकृत डाक द्वारा भेजा जा सकता है।",
+      },
+      {
+        label: "ञ",
+        text: "एजेंडा कुलसचिव द्वारा बैठक से पहले सदस्यों को परिचालित किया जाएगा।",
+      },
+      {
+        label: "ट",
+        text: "एजेंडा में किसी आइटम को शामिल करने के लिए प्रस्ताव की सूचना बैठक से कम से कम दो सप्ताह पहले कुलसचिव तक पहुंचनी होगी। हालांकि, अध्यक्ष बिना उचित सूचना के किसी आइटम को शामिल करने की अनुमति दे सकते हैं।",
+      },
+      {
+        label: "ठ",
+        text: "प्रक्रिया के सभी प्रश्नों के संबंध में अध्यक्ष का निर्णय अंतिम होगा।",
+      },
+      {
+        label: "ड",
+        text: "प्रशासनिक निकाय की कार्यवाही के मिनट्स कुलसचिव द्वारा तैयार किए जाएंगे और अध्यक्ष के अनुमोदन के बाद प्रशासनिक निकाय के सभी सदस्यों को परिचालित किए जाएंगे। मिनट्स के साथ कोई संशोधन, यदि कोई हो, तो अगली बैठक में पुष्टि के लिए प्रस्तुत किया जाएगा। मिनट्स की पुष्टि और अध्यक्ष द्वारा हस्ताक्षर के बाद, इसे मिनट्स की पुस्तक में दर्ज किया जाएगा जो प्रशासनिक निकाय के सदस्यों द्वारा कार्यालय समय के दौरान निरीक्षण के लिए खुली रहेगी।",
+      },
+      {
+        label: "ढ",
+        text: "अधिनियम की धारा 24 के अनुसार सभी कार्य/शक्तियां प्रशासनिक निकाय के पास निहित हैं।",
+      },
+      {
+        label: "ण",
+        text: "प्रशासनिक निकाय, अधिनियम की धारा 24 की उप-धारा (3) के खंड (घ) के प्रावधानों के अनुसार, विश्वविद्यालय के अधिकारियों, शिक्षकों और कर्मचारियों के ऐसे अन्य पदों को सृजित कर सकता है जो उसे आवश्यक लगे।",
+      },
+    ],
+    english: [
+      {
+        label: "b",
+        text: "The term of nominated members shall be three years or till further orders.",
+      },
+      {
+        label: "c",
+        text: "The term of office of ex-officio members shall continue so long as they hold the office by virtue of which they are members.",
+      },
+      {
+        label: "d",
+        text: "The Sponsoring Body shall have power to remove any member of the Governing Body with reasons to be recorded in writing.",
+      },
+      {
+        label: "e",
+        text: "Meetings of the Governing Body shall be convened by the Chancellor either on his initiative or on a requisition signed by not less than four members of the Governing Body.",
+      },
+      {
+        label: "f",
+        text: "Decisions on all issues considered in the meetings of the Governing Body shall be taken by majority votes of the members present.",
+      },
+      {
+        label: "g",
+        text: "The Chancellor, if present, shall preside over the meetings of the Governing Body. In his absence, the Chancellor may nominate Pro Chancellor or a member of the Governing Body.",
+      },
+      {
+        label: "h",
+        text: "A written notice of every meeting shall be sent by the Registrar to every member at least two weeks before the scheduled date of the meeting.",
+        note: "Provided that the Chairman may call a special meeting of the Governing Body at short notice to consider any urgent matter.",
+      },
+      {
+        label: "j",
+        text: "The notice may be delivered either by hand, e-mail or sent by registered post at the address of each member as recorded in the office.",
+      },
+      {
+        label: "k",
+        text: "Agenda shall be circulated by the Registrar to the members before the meeting.",
+      },
+      {
+        label: "l",
+        text: "Notices of motion for inclusion of any item on the agenda must reach the Registrar at least two weeks before the meeting. The Chairperson may, however, permit inclusion of any item for which due notice has not been received.",
+      },
+      {
+        label: "m",
+        text: "The ruling of the Chairperson in regard to all the questions of procedure shall be final.",
+      },
+      {
+        label: "n",
+        text: "The minutes of the proceedings of the Governing Body shall be drawn up by the Registrar and after the approval of the Chairman shall be circulated to all members of the Governing Body. The amendments, if any, with minutes shall be placed for confirmation at the next meeting of the Governing Body. After the minutes are confirmed and signed by the Chairman, the same shall be recorded in a book of minutes which shall be kept open for inspection during office hours by the members of the Governing Body.",
+      },
+      {
+        label: "o",
+        text: "As per section 24 of the Act, all the works/powers are enshrined with the Governing Body.",
+      },
+      {
+        label: "p",
+        text: "The Governing Body may, in accordance with the provisions of clause (d) to sub-section (3) of section 24 of the Act, create such other posts of officers, teachers, and employees of the University to perform such functions as it may deem necessary.",
       },
     ],
   },
