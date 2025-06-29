@@ -180,6 +180,18 @@ export interface BoardOfStudiesData {
   biotechnology: BoardSection;
 }
 
+export interface EmpoweredBody {
+  title: Title;
+  description: {
+    hindi: string;
+    english: string;
+  };
+  powers: {
+    hindi: string[];
+    english: string[];
+  };
+}
+
 export interface HomeDataType {
   aboutMain: {
     hindi: {
@@ -330,4 +342,69 @@ export interface ItCommitteeMember {
   image: string;
   name: Title;
   designation: Title;
+}
+
+export interface GoverningBody {
+  title: Title;
+  composition: {
+    hindi: {
+      description: string;
+      members: string[];
+      note: string;
+    };
+    english: {
+      description: string;
+      members: string[];
+      note: string;
+    };
+  };
+  rules: {
+    hindi: {
+      label: string;
+      text: string;
+      note?: string;
+    }[];
+    english: {
+      label: string;
+      text: string;
+      note?: string;
+    }[];
+  };
+}
+
+interface Socials {
+  instagram?: string;
+  facebook?: string;
+  twitter?: string;
+  youtube?: string;
+}
+
+interface Person {
+  hindi: {
+    name: string;
+    designation: string;
+    university: string;
+  };
+  english: {
+    name: string;
+    designation: string;
+    university: string;
+  };
+  image: string;
+  email: string;
+  website?: string;
+  profilePdf?: string;
+  socials?: Socials;
+}
+
+export interface Administration {
+  chancellor: Person;
+  proChancellor: Person;
+  viceChancellor: Person;
+  registrar: Person;
+  financeOfficer: Person;
+  controllerOfExamination: Person;
+  chiefProctor: Person;
+  chiefVigilanceOfficer: Person;
+  ombudsPerson: Person;
 }
