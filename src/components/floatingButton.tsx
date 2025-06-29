@@ -65,7 +65,7 @@ export default function FloatingButtonsCustom() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-400 p-1.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-1.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[22px] h-[22px]" />
                 <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
@@ -77,7 +77,7 @@ export default function FloatingButtonsCustom() {
             {/* Search Button for Mobile - In Middle */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="group relative bg-orange-400 text-white p-2 rounded-full shadow shadow-black/30 hover:bg-orange-500 transition-all duration-200 hover:scale-110 scale-110"
+              className="group relative bg-orange-500 text-white p-2 rounded-full shadow shadow-black/30 hover:bg-orange-500 transition-all duration-200 hover:scale-110 scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ export default function FloatingButtonsCustom() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-400 p-1.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-1.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[22px] h-[22px]" />
                 <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
@@ -123,7 +123,7 @@ export default function FloatingButtonsCustom() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-400 p-3 lg:p-3.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-3 lg:p-3.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[18px] h-[18px] lg:w-[22px] lg:h-[22px]" />
                 <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">
@@ -135,7 +135,7 @@ export default function FloatingButtonsCustom() {
             {/* Search Button in Middle */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="group relative bg-orange-400 text-white p-3.5 lg:p-4 rounded-full shadow shadow-black/30 hover:bg-orange-500 transition-all duration-200 hover:scale-110 scale-110"
+              className="group relative bg-orange-500 text-white p-3.5 lg:p-4 rounded-full shadow shadow-black/30 hover:bg-orange-500 transition-all duration-200 hover:scale-110 scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ export default function FloatingButtonsCustom() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-orange-400 p-3 lg:p-3.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
+                className="group relative text-orange-500 p-3 lg:p-3.5 rounded-full shadow shadow-black/30 hover:bg-blue-950/90 hover:backdrop-blur-sm transition-all duration-200 hover:scale-105"
               >
                 <Icon className="w-[18px] h-[18px] lg:w-[22px] lg:h-[22px]" />
                 <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 px-3 py-1 bg-white/10 backdrop-blur-md text-white text-sm lg:text-base rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">

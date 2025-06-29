@@ -11,7 +11,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   <AnimatedCard delay={delay}>
     <ModernCard className="h-full group">
       <div className="mb-6 flex justify-center">
-        <div className="p-4 rounded-2xl bg-gradient-to-br from-orange-600 to-amber-600 text-white group-hover:scale-110 transition-transform duration-300">
+        <div className="p-4 rounded-2xl bg-orange-500 text-white group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>
       </div>
