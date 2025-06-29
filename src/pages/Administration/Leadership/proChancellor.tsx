@@ -1,17 +1,21 @@
+import { UseLanguage } from "@/context/languageContext";
 import MainLayout from "@/layouts/homeLayout";
 import PersonCard from "@/layouts/personLayout";
+import { administrationData } from "@/utils/leadershipData";
 
-export default function proChancellor() {
+export default function ProChancellor() {
+  const { language } = UseLanguage();
+  const { proChancellor } = administrationData;
   return (
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
         <PersonCard
-          image="/admin/drupsingh.jpg"
-          name="Prof. Uday Pratap Singh"
-          designation="Pro Chancellor"
-          university="Mahayogi Gorakhnath University Gorakhpur"
-          email="upsingh300@gmail.com"
-          profilePdf="https://mgug.ac.in/PDF/ProfUPSingh.pdf"
+          image={proChancellor.image}
+          name={proChancellor[language].name}
+          designation={proChancellor[language].designation}
+          university={proChancellor[language].university}
+          email={proChancellor.email}
+          profilePdf={proChancellor.profilePdf}
         />
       </section>
     </MainLayout>

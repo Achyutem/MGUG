@@ -1,23 +1,22 @@
 import MainLayout from "@/layouts/homeLayout";
 import PersonCard from "@/layouts/personLayout";
+import { administrationData } from "@/utils/leadershipData";
+import { UseLanguage } from "@/context/languageContext";
 
 const Chancellor = () => {
+  const { language } = UseLanguage();
+  const { chancellor } = administrationData;
   return (
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
         <PersonCard
-          image="/admin/YogiAdityanath.webp"
-          name="Mahant Yogi Adityanath Ji Maharaj"
-          designation="Chancellor / Founder"
-          university="Mahayogi Gorakhnath University Gorakhpur"
-          email="yogiadityanath72@gmail.com"
-          website="https://www.yogiadityanath.in"
-          socials={{
-            instagram: "https://instagram.com/yogiadityanath",
-            facebook: "https://facebook.com/yogiadityanath",
-            twitter: "https://twitter.com/myogiadityanath",
-            youtube: "https://youtube.com/@yogiadityanath",
-          }}
+          image={chancellor.image}
+          name={chancellor[language].name}
+          designation={chancellor[language].designation}
+          university={chancellor[language].university}
+          email={chancellor.email}
+          website={chancellor.website}
+          socials={chancellor.socials}
         />
       </section>
     </MainLayout>

@@ -1,16 +1,20 @@
+import { UseLanguage } from "@/context/languageContext";
 import MainLayout from "@/layouts/homeLayout";
 import PersonCard from "@/layouts/personLayout";
+import { administrationData } from "@/utils/leadershipData";
 
 const OmbudsPerson = () => {
+  const { language } = UseLanguage();
+  const { ombudsPerson } = administrationData;
   return (
     <MainLayout>
       <section className="py-16 px-4 md:px-16 max-w-5xl mx-auto">
         <PersonCard
-          image="/admin/Prof_V_K_Singh.jpg"
-          name="Prof. V. K. Singh"
-          designation="Ombuds Person"
-          university="Former Vice-Chancellor, DDU Gorakhpur University"
-          email=" singhvijaikrishna9@gmail.com"
+          image={ombudsPerson.image}
+          name={ombudsPerson[language].name}
+          designation={ombudsPerson[language].designation}
+          university={ombudsPerson[language].university}
+          email={ombudsPerson.email}
         />
       </section>
     </MainLayout>
