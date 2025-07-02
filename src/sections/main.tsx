@@ -36,13 +36,25 @@ export default function Main() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
+                {/* <span className="block">
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                    Mahayogi&nbsp;
+                  </span>
+                  <span className="text-white">Gorakhnath</span>
+                </span>
                 <span className="block">
-                  <span className="bg-orange-500 bg-clip-text text-transparent">
+                  <span className="text-white">University&nbsp;</span>
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
+                    Gorakhpur
+                  </span>
+                </span> */}
+                <span className="block">
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     {t.universityName1}
                   </span>
                 </span>
                 <span className="block">
-                  <span className="bg-orange-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     {t.universityName2}
                   </span>
                 </span>
@@ -58,7 +70,7 @@ export default function Main() {
                         speed={50}
                         delay={0}
                         loopInterval={6000}
-                        className="bg-orange-500 bg-clip-text text-transparent"
+                        className="bg-orange-400 bg-clip-text text-transparent"
                       />
                       <span className="absolute -inset-1 bg-gradient-to-r from-orange-600/20 to-amber-600/20 blur-lg -z-10 animate-pulse rounded"></span>
                     </span>
@@ -69,13 +81,13 @@ export default function Main() {
                         speed={50}
                         delay={800}
                         loopInterval={6000}
-                        className="bg-orange-500 bg-clip-text text-transparent"
+                        className="bg-orange-400 bg-clip-text text-transparent"
                       />
                       <span className="absolute -inset-1 bg-gradient-to-r from-amber-600/20 to-orange-600/20 blur-lg -z-10 animate-pulse rounded"></span>
                     </span>
                   </h2>
                   <div className="mt-2 lg:mt-3 h-0.5 lg:h-1 w-20 sm:w-24 lg:w-32 mx-auto lg:ml-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full">
-                    <div className="h-full w-full bg-orange-500 rounded-full animate-pulse" />
+                    <div className="h-full w-full bg-orange-400 rounded-full animate-pulse" />
                   </div>
                 </div>
               </div>
@@ -89,7 +101,7 @@ export default function Main() {
                   href="https://mgug.ac.in/academics/programmes_list.php"
                   className="shrink-0"
                 >
-                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 hover:scale-105 transition-all duration-300">
+                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-400 hover:scale-105 transition-all duration-300">
                     {t.exploreButton}
                   </button>
                 </a>
