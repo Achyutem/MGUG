@@ -279,6 +279,8 @@ export interface HomeDataType {
       badge: string;
       universityName1: string;
       universityName2: string;
+      universityName3: string;
+      universityName4: string;
       animatedText1: string;
       animatedText2: string;
       description: string;
@@ -289,6 +291,8 @@ export interface HomeDataType {
       badge: string;
       universityName1: string;
       universityName2: string;
+      universityName3: string;
+      universityName4: string;
       animatedText1: string;
       animatedText2: string;
       description: string;
