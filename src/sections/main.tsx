@@ -50,12 +50,14 @@ export default function Main() {
                 </span> */}
                 <span className="block">
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    {t.universityName1}
+                    {t.universityName1}&nbsp;
                   </span>
+                  <span className="text-white">{t.universityName2}</span>
                 </span>
                 <span className="block">
+                  <span className="text-white">{t.universityName3}&nbsp;</span>
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    {t.universityName2}
+                    {t.universityName4}
                   </span>
                 </span>
               </h1>
@@ -101,7 +103,7 @@ export default function Main() {
                   href="https://mgug.ac.in/academics/programmes_list.php"
                   className="shrink-0"
                 >
-                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-400 hover:scale-105 transition-all duration-300">
+                  <button className="whitespace-nowrap text-sm px-5 py-3 sm:text-base rounded-lg font-semibold bg-orange-500 hover:scale-105 transition-all duration-300">
                     {t.exploreButton}
                   </button>
                 </a>
