@@ -36,7 +36,7 @@ export default function Main() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 lg:mb-6 leading-tight text-white">
-                {/* <span className="block">
+                <span className="block">
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     Mahayogi&nbsp;
                   </span>
@@ -47,8 +47,8 @@ export default function Main() {
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     Gorakhpur
                   </span>
-                </span> */}
-                <span className="block">
+                </span>
+                {/* <span className="block">
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     {t.universityName1}&nbsp;
                   </span>
@@ -59,7 +59,7 @@ export default function Main() {
                   <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
                     {t.universityName4}
                   </span>
-                </span>
+                </span> */}
               </h1>
 
               {/* Animated Text Section */}
