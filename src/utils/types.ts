@@ -413,3 +413,85 @@ export interface Administration {
   chiefVigilanceOfficer: Person;
   ombudsPerson: Person;
 }
+
+export interface FeeStructureTitles {
+  heading: {
+    hindi: string;
+    english: string;
+  };
+  tableHeaders: {
+    srNo: {
+      hindi: string;
+      english: string;
+    };
+    program: {
+      hindi: string;
+      english: string;
+    };
+    seats: {
+      hindi: string;
+      english: string;
+    };
+    fees: {
+      hindi: string;
+      english: string;
+    };
+  };
+  note: {
+    hindi: string;
+    english: string;
+  };
+}
+
+export interface FeeStructureMember {
+  srNo: number;
+  name: {
+    hindi: string;
+    english: string;
+  };
+  seats: number;
+  fees: {
+    hindi: string;
+    english: string;
+  };
+}
+
+export interface Program {
+  name: Title;
+  description: Title;
+}
+
+export interface CertificationDiplomaContent {
+  heading: Title;
+  programs: {
+    [key: string]: Program;
+  };
+}
+
+export interface UnderGraduateContent {
+  heading: Title;
+  programs: {
+    [key: string]: Program;
+  };
+}
+
+export interface ListProgram {
+  name: Title;
+  duration: Title;
+  fees: Title;
+  examinationFee: Title;
+  seats: Title;
+  supernumerarySeats?: Title;
+  qualification: Title[];
+  note?: Title;
+}
+
+export interface Faculty {
+  name: Title;
+  programs: ListProgram[];
+}
+
+export interface ProgramsContent {
+  heading: Title;
+  faculties: Faculty[];
+}
