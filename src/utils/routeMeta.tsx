@@ -27,6 +27,11 @@ import OurIdeals from "@/pages/More/About/ourIdeals";
 import Inspiration from "@/pages/More/About/inspiration";
 import Leadership from "@/pages/More/About/leadership";
 import ItTeam from "@/pages/Administration/Committees/itTeam";
+import FeeStructure from "@/pages/Admission/feeStructure";
+import CertificationDiploma from "@/pages/Admission/certAndDiploma";
+import UnderGraduate from "@/pages/Admission/underGraduate";
+import ListOfPrograms from "@/pages/Admission/listOfProgram";
+import PhDPrograms from "@/pages/Admission/phdProgram";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -162,5 +167,32 @@ export const routeMeta = [
     title: "IT Team",
     path: "/Committee/it-team",
     element: <ItTeam />,
+  },
+
+  // admission
+  {
+    title: "Fee Structure",
+    path: "/admission/fee-structure",
+    element: <FeeStructure />,
+  },
+  {
+    title: "Certification and Diploma",
+    path: "/admission/certification-and-diploma",
+    element: <CertificationDiploma />,
+  },
+  {
+    title: "UnderGraduate Program",
+    path: "/admission/under-graduate",
+    element: <UnderGraduate />,
+  },
+  {
+    title: "List of Program",
+    path: "/admission/list-of-program",
+    element: <ListOfPrograms />,
+  },
+  {
+    title: "List of Program",
+    path: "/admission/phd-program",
+    element: <PhDPrograms />,
   },
 ];
