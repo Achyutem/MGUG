@@ -24,7 +24,7 @@ const PhDPrograms = () => {
 
   return (
     <MainLayout>
-      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto bg-gray-900 min-h-screen">
+      <section className="py-16 px-4 md:px-16 max-w-7xl mx-auto min-h-screen">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-10 text-orange-400 text-center uppercase tracking-tight">
           {t.heading[language]}
         </h1>
@@ -50,7 +50,7 @@ const PhDPrograms = () => {
                 </span>
               </Button>
               {selectedFaculty === index && (
-                <div className="mt-4 bg-gray-800 rounded-lg shadow-md overflow-x-auto">
+                <div className="mt-4 bg-gray-800 rounded-lg shadow-md overflow-x-auto scrollbar-none">
                   <Table>
                     <TableHeader>
                       <TableRow className="bg-gradient-to-r from-orange-400 to-orange-600 border-b border-gray-700/50">
@@ -72,9 +72,6 @@ const PhDPrograms = () => {
                         <TableHead className="text-white font-bold text-sm py-4">
                           Qualification
                         </TableHead>
-                        <TableHead className="text-white font-bold text-sm py-4">
-                          Note
-                        </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -86,7 +83,14 @@ const PhDPrograms = () => {
                           }`}
                         >
                           <TableCell className="font-medium text-gray-200 text-sm py-3">
-                            {program.name[language]}
+                            <div>
+                              <div>{program.name[language]}</div>
+                              {program.note?.[language] && (
+                                <div className="text-gray-400 text-xs mt-2 italic">
+                                  Note: {program.note[language]}
+                                </div>
+                              )}
+                            </div>
                           </TableCell>
                           <TableCell className="text-gray-200 text-sm py-3">
                             {program.duration[language]}
@@ -101,16 +105,13 @@ const PhDPrograms = () => {
                             {program.seats[language]}
                           </TableCell>
                           <TableCell className="text-gray-200 text-sm py-3">
-                            <ul className="list-disc pl-5 space-y-1">
+                            <ul className="list-disc pl-5 space-y-2 leading-6">
                               {program.qualification.map((qual, qIndex) => (
                                 <li key={qIndex} className="text-sm">
                                   {qual[language]}
                                 </li>
                               ))}
                             </ul>
-                          </TableCell>
-                          <TableCell className="text-gray-200 text-sm py-3">
-                            {program.note?.[language] || "-"}
                           </TableCell>
                         </TableRow>
                       ))}
