@@ -2116,3 +2116,208 @@ export const phdprogramsContent: ProgramsContent = {
     },
   ],
 };
+
+export const postgraduateProgramsContent: ProgramsContent = {
+  heading: {
+    hindi: "स्नातकोत्तर कार्यक्रम",
+    english: "Post Graduate Programs",
+  },
+  faculties: [
+    {
+      name: {
+        hindi: "नर्सिंग संकाय",
+        english: "Faculty of Nursing",
+      },
+      programs: [
+        {
+          name: { hindi: "एम.एससी. नर्सिंग", english: "M.Sc. (Nursing)" },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: {
+            hindi: "₹100000/- प्रति वर्ष",
+            english: "₹100000/- per year",
+          },
+          examinationFee: {
+            hindi: "₹5000/- प्रति वर्ष",
+            english: "₹5000/- per year",
+          },
+          seats: { hindi: "कुल: 20", english: "Total: 20" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से बी.एससी. नर्सिंग/बी.एससी. (ऑनर्स) नर्सिंग/पोस्ट बेसिक बी.एससी. नर्सिंग में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "B.Sc. Nursing/B.Sc. (Hons) Nursing/Post Basic B.Sc. Nursing with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+            {
+              hindi:
+                "नर्सिंग काउंसिल के साथ पंजीकृत नर्स और मिडवाइफ होना चाहिए।",
+              english:
+                "Must be a registered nurse and midwife with the Nursing Council.",
+            },
+            {
+              hindi: "न्यूनतम एक वर्ष का कार्य अनुभव।",
+              english: "Minimum one year of work experience.",
+            },
+          ],
+        },
+        {
+          name: {
+            hindi:
+              "नर्स प्रैक्टिशनर इन क्रिटिकल केयर (पीजी रेजिडेंसी) कार्यक्रम",
+            english:
+              "Nurse Practitioner in Critical Care (PG Residency) Programme",
+          },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: {
+            hindi: "₹120000/- प्रति वर्ष",
+            english: "₹120000/- per year",
+          },
+          examinationFee: {
+            hindi: "₹5000/- प्रति वर्ष",
+            english: "₹5000/- per year",
+          },
+          seats: { hindi: "कुल: 10", english: "Total: 10" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से बी.एससी. नर्सिंग/पोस्ट बेसिक बी.एससी. नर्सिंग में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "B.Sc. Nursing/Post Basic B.Sc. Nursing with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+            {
+              hindi:
+                "नर्सिंग काउंसिल के साथ पंजीकृत नर्स और मिडवाइफ होना चाहिए।",
+              english:
+                "Must be a registered nurse and midwife with the Nursing Council.",
+            },
+            {
+              hindi: "न्यूनतम एक वर्ष का क्रिटिकल केयर में कार्य अनुभव।",
+              english: "Minimum one year of work experience in critical care.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: {
+        hindi: "सहायक स्वास्थ्य विज्ञान संकाय",
+        english: "Faculty of Allied Health Sciences",
+      },
+      programs: [
+        {
+          name: {
+            hindi: "एम.एससी. बायोटेक्नोलॉजी",
+            english: "M.Sc. Biotechnology",
+          },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: { hindi: "₹80000/- प्रति वर्ष", english: "₹80000/- per year" },
+          examinationFee: {
+            hindi: "₹4000/- प्रति वर्ष",
+            english: "₹4000/- per year",
+          },
+          seats: { hindi: "कुल: 30", english: "Total: 30" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से बायोटेक्नोलॉजी/लाइफ साइंसेज/संबंधित विषय में स्नातक डिग्री (बी.एससी./बी.टेक.) में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "Bachelor’s degree (B.Sc./B.Tech.) in Biotechnology/Life Sciences/related discipline with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+          ],
+        },
+        {
+          name: {
+            hindi: "एम.एससी. मेडिकल बायोकेमिस्ट्री",
+            english: "M.Sc. Medical Biochemistry",
+          },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: { hindi: "₹80000/- प्रति वर्ष", english: "₹80000/- per year" },
+          examinationFee: {
+            hindi: "₹4000/- प्रति वर्ष",
+            english: "₹4000/- per year",
+          },
+          seats: { hindi: "कुल: 20", english: "Total: 20" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से बायोकेमिस्ट्री/लाइफ साइंसेज/संबंधित विषय में स्नातक डिग्री (बी.एससी./बी.टेक.) में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "Bachelor’s degree (B.Sc./B.Tech.) in Biochemistry/Life Sciences/related discipline with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+          ],
+        },
+        {
+          name: {
+            hindi: "एम.एससी. मेडिकल माइक्रोबायोलॉजी",
+            english: "M.Sc. Medical Microbiology",
+          },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: { hindi: "₹80000/- प्रति वर्ष", english: "₹80000/- per year" },
+          examinationFee: {
+            hindi: "₹4000/- प्रति वर्ष",
+            english: "₹4000/- per year",
+          },
+          seats: { hindi: "कुल: 20", english: "Total: 20" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से माइक्रोबायोलॉजी/लाइफ साइंसेज/संबंधित विषय में स्नातक डिग्री (बी.एससी./बी.टेक.) में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "Bachelor’s degree (B.Sc./B.Tech.) in Microbiology/Life Sciences/related discipline with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+          ],
+        },
+        {
+          name: {
+            hindi: "एम.एससी. बायोकेमिस्ट्री (एनईपी-2020 के अनुसार)",
+            english: "M.Sc. Biochemistry As per NEP-2020",
+          },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: { hindi: "₹80000/- प्रति वर्ष", english: "₹80000/- per year" },
+          examinationFee: {
+            hindi: "₹4000/- प्रति वर्ष",
+            english: "₹4000/- per year",
+          },
+          seats: { hindi: "कुल: 25", english: "Total: 25" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से बायोकेमिस्ट्री/लाइफ साइंसेज/संबंधित विषय में स्नातक डिग्री (बी.एससी./बी.टेक.) में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "Bachelor’s degree (B.Sc./B.Tech.) in Biochemistry/Life Sciences/related discipline with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+            {
+              hindi: "एनईपी-2020 दिशानिर्देशों के अनुसार पाठ्यक्रम संरचना।",
+              english: "Curriculum structure as per NEP-2020 guidelines.",
+            },
+          ],
+        },
+        {
+          name: {
+            hindi: "एम.एससी. माइक्रोबायोलॉजी (एनईपी-2020 के अनुसार)",
+            english: "M.Sc. Microbiology As per NEP-2020",
+          },
+          duration: { hindi: "2 वर्ष", english: "2 years" },
+          fees: { hindi: "₹80000/- प्रति वर्ष", english: "₹80000/- per year" },
+          examinationFee: {
+            hindi: "₹4000/- प्रति वर्ष",
+            english: "₹4000/- per year",
+          },
+          seats: { hindi: "कुल: 25", english: "Total: 25" },
+          qualification: [
+            {
+              hindi:
+                "किसी मान्यता प्राप्त विश्वविद्यालय से माइक्रोबायोलॉजी/लाइफ साइंसेज/संबंधित विषय में स्नातक डिग्री (बी.एससी./बी.टेक.) में न्यूनतम 55% अंक (एससी/एसटी के लिए 50%)।",
+              english:
+                "Bachelor’s degree (B.Sc./B.Tech.) in Microbiology/Life Sciences/related discipline with a minimum of 55% marks (50% for SC/ST) from a recognized university.",
+            },
+            {
+              hindi: "एनईपी-2020 दिशानिर्देशों के अनुसार पाठ्यक्रम संरचना।",
+              english: "Curriculum structure as per NEP-2020 guidelines.",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
