@@ -33,7 +33,7 @@ const PhDPrograms = () => {
             <div key={index} className="flex flex-col">
               <Button
                 variant="outline"
-                className="w-full h-14 bg-transparent text-orange-400 hover:bg-gray-700/30 hover:text-orange-300 transition-all duration-300 border-2 border-orange-400 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
+                className="w-full h-14 bg-transparent text-orange-400 hover:bg-gray-700/30 hover:text-orange-500 transition-all duration-300 border-2 border-orange-400 rounded-lg text-lg font-semibold flex justify-between items-center px-4 shadow-sm"
                 onClick={() => toggleFaculty(index)}
               >
                 <span>{faculty.name[language]}</span>
