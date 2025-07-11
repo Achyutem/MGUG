@@ -263,7 +263,7 @@ export const megaMenus: MegaMenus = {
             hindi: "स्नातकोत्तर कार्यक्रम",
             english: "Post Graduate Programs",
           },
-          href: "https://mgug.ac.in/academics/pg.php",
+          href: "/admission/post-graduate",
         },
         {
           type: "link",

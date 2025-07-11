@@ -32,6 +32,7 @@ import CertificationDiploma from "@/pages/Admission/certAndDiploma";
 import UnderGraduate from "@/pages/Admission/underGraduate";
 import ListOfPrograms from "@/pages/Admission/listOfProgram";
 import PhDPrograms from "@/pages/Admission/phdProgram";
+import PostgraduatePrograms from "@/pages/Admission/postGraduate";
 
 export const routeMeta = [
   { title: "Home", path: "/", element: <UniversityLandingPage /> },
@@ -189,6 +190,11 @@ export const routeMeta = [
     title: "List of Program",
     path: "/admission/list-of-program",
     element: <ListOfPrograms />,
+  },
+  {
+    title: "PostGraduate Program",
+    path: "/admission/post-graduate",
+    element: <PostgraduatePrograms />,
   },
   {
     title: "List of Program",
